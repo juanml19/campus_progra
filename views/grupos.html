@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ingles II</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+ <!-- Css sheet-->
+    <link rel="stylesheet" href="../css/site.css" />
+   
+	</head>	
+<body>
+		<div class="row">
+			<div class="col-sm">
+				<nav class="navbar navbar-expand-lg no-border background-gradient">
+				  <a class="navbar-brand" href="#">Universidad</a>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item active">
+						<a class="nav-link navb-color" href="home.html">Home <span class="sr-only">(current)</span></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#">Asistencias</a>
+					  </li>
+                        <li class="nav-item">
+						<a class="nav-link" href="#">Matrícula</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Evaluación Docente
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="#">Preguntas</a>
+						  <a class="dropdown-item" href="#">Respuestas</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="#">Otros</a>				  
+						</div>
+					  </li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<ul class="navbar-nav mr-auto">
+						  <li>
+							<a class='container-fluid nav-item' class="nombre-header">Username</a>
+						  </li> 
+						  <li>
+							<a class='container-fluid nav-item' href="#" class="boton-header"> Salir</a>
+						  </li>  
+						</ul>  
+					</form>
+				  </div>
+				</nav>
+			</div>	
+		</div>	
+    
+    <div class="container">
+        <div class="col-md-12">
+			
+			<div class="panel-heading">crear grupo
+				<button type="button"data-toggle="modal" data-target="#myModal">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>
+				</button>
+			</div>
+			<div class="row">
+				
+				<div class="col-md-12">
+							  
+					<!-- Table -->
+				   
+					<table id="datatable" class="table table-striped table-bordered">
+
+						 <thead>
+							  <tr>
+							   <th>Materia</th>
+								 <th>IDgrupo</th>
+								 <th>Numero de grupo</th>
+								  <th>Horario</th>
+								 <th>Opciones</th>
+							  </tr>
+						 </thead>
+						<tbody id ="tabla2" > </tbody>
+					</table>
+								
+				</div>
+			</div>
+		
+	<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+				
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" id = "titleModel">crear nuevo grupo</h4>
+					</div>
+					
+					<div class="modal-body">
+					  
+						<label for="usr">Materia:</label><br>
+					   <input type = "text" class="form-control" id = "idmateria"> </input><br>
+						<label for="asd">IDgrupo:</label><br>
+					   <input type = "text" class="form-control" id = "idgrupo"> </input><br>
+					   
+					   <label for="asd">Numero de grupo:</label><br>
+					    <input type="number" class="form-control" min="1" max="15" id = "idnumerogrupo">
+					 
+						<label for="asd">Horario:</label><br>
+					   <input type = "text" class="form-control" id = "idhorario"> </input><br>
+						
+					   <input type = "text"  class ="HiddenIndex" id ="HiddenIndex"  style="display:none"> </input>
+					   
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" id ="closeMyModal">cancelar</button>
+						<button type="button"  class="btn btn-default" id = "Add"   onclick="Addrow()">agregar</button>	
+						<button type="button"  class="btn btn-default" id = "edit"   onclick="editRowBotton()" style="display:none"  >editar grupo</button>
+					  </div>
+					  
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<button type="button"data-toggle="modal" data-target="#DeleteModal" style="display:none" id = "btn_modalDelete"></button>
+		
+			<!-- Modal Eliminar -->
+		<div id="DeleteModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+				
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" id = "titleModelDelete">Borrar</h4>
+					</div>
+					
+					<div class="modal-body">
+					  
+						<label for="usr">desea eliminar el grupo?</label><br>
+						<button type="button"  class="btn btn-default" id = "yesDelete"  >si</button>	
+						<button type="button"  class="btn btn-default" id = "noDelete"  data-dismiss="modal" >No</button>
+						
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" id ="closeDeleteModal">cerrar</button>
+					  </div>
+					  
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <footer class="background-gradient text-center">
+        <p>Diseñado por Equipo Web Design</p>
+    </footer>
+    <script src="../js/function.js"></script>
+	</body>
+</html>
