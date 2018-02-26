@@ -13,6 +13,12 @@ jQuery(document).ready(function () {
 	jQuery("#myModal").on('hidden.bs.modal', function (){
         cleanModalForm();
     });
+    jQuery('.not-number').keyup(function (e) {
+        if (!/^[ a-záéíóúüñ]*$/i.test(this.value)) {
+            console.log(this.value);
+            this.value = this.value.replace(/[^ a-záéíóúüñ]+/ig,"");
+        }
+    });
 });
 function Matricular(text) {
 			var row = $(text).detach();

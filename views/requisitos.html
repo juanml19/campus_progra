@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="col-sm">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
-				  <a class="navbar-brand" href="#">Universidad</a>
+				  <a class="navbar-brand" href="home.html">Universidad</a>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 					  <li class="nav-item active">
@@ -30,20 +30,39 @@
 					  <li class="nav-item">
 						<a class="nav-link" href="asistencia.html">Asistencias</a>
 					  </li>
-                        <li class="nav-item">
-						<a class="nav-link" href="#">Matrícula</a>
+                    <li class="nav-item">
+						<a class="nav-link" href="matricula.html">Matrícula</a>
 					  </li>
-					  <li class="nav-item">
+                    <li class="nav-item">
+						<a class="nav-link" href="cursos.html">Cursos</a>
+					  </li>
+                    <li class="nav-item">
 						<a class="nav-link" href="evaluacionD.html">Evaluación Docente</a>
+					  </li>
+                       <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Configuración
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="acciones.html">Acciones</a>
+						  <a class="dropdown-item" href="parametros.html">Parametros</a>
+						  <a class="dropdown-item" href="carreras.html">Carreras</a>
+						  <a class="dropdown-item" href="materias.html">Materias</a>
+						  <a class="dropdown-item" href="requisitos.html">Requisitos</a>
+						  <a class="dropdown-item" href="tipos_usuarios.html">Tipos Usuarios</a>
+						</div>
+					  </li>
+                      <li class="nav-item">
+						<a class="nav-link" href="usuarios.html">Usuarios</a>
 					  </li>
 					</ul>
 					<form class="form-inline my-2 my-lg-0">
 						<ul class="navbar-nav mr-auto">
 						  <li>
-							<a class='container-fluid nav-item' class="nombre-header" href="#">Username</a>
+							<a href="#" class='container-fluid nav-item' class="nombre-header">Username</a>
 						  </li> 
 						  <li>
-							<a class='container-fluid nav-item' class="boton-header" href="login.html"> Salir</a>
+							<a class='container-fluid nav-item' href="#" class="boton-header"> Salir</a>
 						  </li>  
 						</ul>  
 					</form>
@@ -53,12 +72,43 @@
 		</div>	
     
     <div class="container"> 
- <section class="container">
-        <header class="text-center">
-            <h1>Requisitos</h1>
-        </header>
-        <!-- <button class="fa fa-plus">  </button> -->
-		<a class="navbar navbar-expand-lg no-border navbar-dark background-gradient nav-link" href="form-requisito.html"><font color="white">Nuevo Requisito</font></a>
+     
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model_requisito">Nuevo requisito</button>
+
+    <!-- Modal -->
+    <div id="model_requisito" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Nuevo  requisito</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+                <div class="card">
+                <form method="post" class="card-body">
+                    <div class="form-group">
+                        <label>Código de Materia:</label>
+                        <input class="form-control validate" type="Código de Materia" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Código de Requisito:</label>
+                        <input class="form-control validate" type="Código de Requisito" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input class="form-control validate" type="Nombre" required />
+                    </div>
+					<div>
+                        <input type="submit" class="btn btn-primary pull-right" />
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
 		<table title="Requisitos" class="table table-hover">
             <thead class="thead-light">
                 <tr>
@@ -101,35 +151,7 @@
                 </tr>
             </tfoot>
         </table>
-    </section>
-    <div class="container">
-        <header class="text-center">
-            <h1>Requisitos</h1>
-        </header>
-        <section>
-            <h2>Registrar Requisito</h2>
-            <div class="card">
-                <form method="post" class="card-body">
-                    <div class="form-group">
-                        <label>Código de Materia:</label>
-                        <input class="form-control validate" type="Código de Materia" required />
-                    </div>
-                    <div class="form-group">
-                        <label>Código de Requisito:</label>
-                        <input class="form-control validate" type="Código de Requisito" required />
-                    </div>
-                    <div class="form-group">
-                        <label>Nombre:</label>
-                        <input class="form-control validate" type="Nombre" required />
-                    </div>
-					<div>
-                        <input type="submit" class="btn btn-primary pull-right" />
-                    </div>
-                </form>
-            </div>
-        </section>
-   </div>
-    
+    </div>
     
     <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
