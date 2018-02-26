@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ingles II</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+ <!-- Css sheet-->
+    <link rel="stylesheet" href="../css/site.css" />
+   
+	</head>	
+	<body> 
+		<div class="row">
+			<div class="col-sm">
+				<nav class="navbar navbar-expand-lg no-border background-gradient">
+				  <a class="navbar-brand" href="#">Universidad</a>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item active">
+						<a class="nav-link navb-color" href="home.html">Home <span class="sr-only">(current)</span></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="asistencia.html">Asistencias</a>
+					  </li>
+                        <li class="nav-item">
+						<a class="nav-link" href="#">Matrícula</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="evaluacionD.html">Evaluación Docente</a>
+					  </li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<ul class="navbar-nav mr-auto">
+						  <li>
+							<a class='container-fluid nav-item' class="nombre-header" href="#">Username</a>
+						  </li> 
+						  <li>
+							<a class='container-fluid nav-item' class="boton-header" href="login.html"> Salir</a>
+						  </li>  
+						</ul>  
+					</form>
+				  </div>
+				</nav>
+			</div>	
+		</div>	
+    
+    <div class="container"> 
+ <a class="navbar navbar-expand-lg no-border navbar-dark background-gradient nav-link" href="form-carrera.html"><font color="white">Nueva Carrera</font></a>
+		<table title="Carreras" class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+				    <th>Acción </th> 
+                    <th>Carrera</th>
+                    <th>Descripción</th>
+                    <th>Director</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+				    <td><a href="form-carrera.html" class="btn btn-primary" role="button">
+                        <span class="fa fa-edit"></span> </a></td>
+                    <td>Informática</td>
+                    <td>Descripción de Informática</td>
+                    <td>Director Uno</td>
+                </tr>
+                <tr>
+                    <td><a href="form-carrera.html" class="btn btn-primary" role="button">
+                        <span class="fa fa-edit"></span> </a></td>
+					<td>Derecho</td>
+                    <td>Descripción de Derecho</td>
+                    <td>Director Dos</td>
+                </tr>
+                <tr>
+                    <td><a href="form-carrera.html" class="btn btn-primary" role="button">
+                        <span class="fa fa-edit"></span> </a></td>
+					<td>Diseño</td>
+                    <td>Descripción de Diseño</td>
+                    <td>Director Tres</td>
+                </tr>
+            </tbody>
+            <tfoot class="table-dark">
+                <tr>
+                    <td></td>
+                    <td><strong>Carreras Disponibles...</strong></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+	    <div class="container">
+        <header class="text-center">
+            <h1>Carreras</h1>
+        </header>
+        <section>
+            <h2>Registrar Carrera</h2>
+            <div class="card">
+                <form method="post" class="card-body">
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input class="form-control validate" type="Nombre" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción:</label>
+                        <input class="form-control validate" type="Descripcion" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Director:</label>
+                        <input class="form-control validate" type="Director" required />
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-primary pull-right" />
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+   </div>
+    
+    
+    <footer class="background-gradient text-center fixed-bottom">
+        <p>Diseñado por Equipo Web Design</p>
+    </footer>
+    <script src="../js/function.js"></script>
+	</body>
+</html>
