@@ -75,33 +75,75 @@
           </div>
           <div class="modal-body">
               <form action="#" name="nuevo_usuario" id="nuevo_usuario" method="post">
-                    <input type="number" name="cedula" id="cedula" placeholder="Cedula"><br>
-                    <input type="text" name="nombre" required id="nombre" placeholder="Nombre"><br>
-                    <input type="text" name="apellido" required id="apellido" placeholder="Apellido"><br>
-                    <input type="email" name="correo" required id="correo" placeholder="Correo"><br>
-                    <input type="text" name="pais" required id="pais" placeholder="Pais"><br>
-                    <input type="text" name="ciudad" required id="ciudad" placeholder="Tipo"><br>
-                    <select name="tipo" id="tipo">
-                        <option selected value="1">Estudiante</option>
-                        <option value="2">Profesor</option>
-                        <option value="3">Administrativo</option>
-                        <option value="4">Director de carrera</option>
-                        <option value="5">Decano</option>
-                        <option value="6">Super Administrador</option>
-                    </select><br>
-                    <select name="estado" id="estado">
-                        <option selected value="0">Pendiente</option>
-                        <option value="1">Activo</option>
-                        <option value="2">Inactivo</option>
-                    </select><br>
-                    <input type="submit" value="Guardar" class="btn btn-success"/>
+                  <div class="form-group">
+                    <input type="number" name="cedula" id="cedula" placeholder="Cedula">
+                </div>
+                  <div class="form-group">
+                    <input type="text" name="nombre" required id="nombre" placeholder="Nombre">
+                </div>
+                  <div class="form-group">
+                        <input type="text" name="apellido" required id="apellido" placeholder="Apellido">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="correo" required id="correo" placeholder="Correo">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="pais" required id="pais" placeholder="Pais">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="ciudad" required id="ciudad" placeholder="Tipo">
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo: </label><select name="tipo" id="tipo">
+                            <option selected value="1">Estudiante</option>
+                            <option value="2">Profesor</option>
+                            <option value="3">Administrativo</option>
+                            <option value="4">Director de carrera</option>
+                            <option value="5">Decano</option>
+                            <option value="6">Super Administrador</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Estado:</label><select name="estado" id="estado">
+                            <option selected value="0">Pendiente</option>
+                            <option value="1">Activo</option>
+                            <option value="2">Inactivo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-success"/>
+                    </div>
               </form>
           </div>
         </div>
 
       </div>
     </div>
-     <table id="tipos_tablas" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        
+    <!-- Modal -->
+    <div id="model_beca" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Beca</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <form action="#" name="beca" id="beca" method="post">
+                  <div class="form-group">
+                    <input type="number" name="porcentaje" id="porcentaje" placeholder="Porcentaje Beca">
+                </div>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-success"/>
+                    </div>
+              </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+     <table id="tabla_usuarios" class="dataTable table table-striped table-bordered" cellspacing="0">
         <thead>
             <tr>
                 <th>Cedula</th>
@@ -113,75 +155,84 @@
                 <th>Tipo</th>
                 <th>Estado</th>
                 <th>
-                    <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#model_beca">Editar</button>
-                    <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#model_usuario">Editar</button>
-                    <a href="#" class="btn btn-danger btn-lg">Eliminar</a>
                 </th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <th>Cedula</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Correo</th>
-                <th>Pais</th>
-                <th>Ciudad</th>
-                <th>Tipo</th>
-                <th>Estado</th>
-                <th></th>
-            </tr>
-        </tfoot>
         <tbody>
             <tr>
-                <th>123456789</th>
-                <th>Joel</th>
-                <th>Perez</th>
-                <th>jperez@prueba.com</th>
-                <th>Costa Rica</th>
-                <th>Cartago</th>
-                <th>Estudiante</th>
-                <th>Activo</th>
+                <td>123456789</td>
+                <td>Joel</td>
+                <td>Perez</td>
+                <td>jperez@prueba.com</td>
+                <td>Costa Rica</td>
+                <td>Cartago</td>
+                <td>Estudiante</td>
+                <td>Activo</td>
+                <td>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca">Beca</button>
+                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                </td>
             </tr>
             <tr>
-                <th>754561234</th>
-                <th>Maria</th>
-                <th>Rojas</th>
-                <th>maria94z@prueba.com</th>
-                <th>Costa Rica</th>
-                <th>San Jose</th>
-                <th>Profesor</th>
-                <th>Activo</th>
+                <td>754561234</td>
+                <td>Maria</td>
+                <td>Rojas</td>
+                <td>maria94z@prueba.com</td>
+                <td>Costa Rica</td>
+                <td>San Jose</td>
+                <td>Profesor</td>
+                <td>Activo</td>
+                <td>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca">Beca</button>
+                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                </td>
             </tr>
             <tr>
-                <th>123456789</th>
-                <th>Joel</th>
-                <th>Perez</th>
-                <th>jperez@prueba.com</th>
-                <th>Costa Rica</th>
-                <th>Cartago</th>
-                <th>Estudiante</th>
-                <th>Activo</th>
+                <td>123456789</td>
+                <td>Joel</td>
+                <td>Perez</td>
+                <td>jperez@prueba.com</td>
+                <td>Costa Rica</td>
+                <td>Cartago</td>
+                <td>Estudiante</td>
+                <td>Activo</td>
+                <td>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca">Beca</button>
+                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                </td>
             </tr>
             <tr>
-                <th>754561234</th>
-                <th>Maria</th>
-                <th>Rojas</th>
-                <th>maria94z@prueba.com</th>
-                <th>Costa Rica</th>
-                <th>San Jose</th>
-                <th>Profesor</th>
-                <th>Activo</th>
+                <td>754561234</td>
+                <td>Maria</td>
+                <td>Rojas</td>
+                <td>maria94z@prueba.com</td>
+                <td>Costa Rica</td>
+                <td>San Jose</td>
+                <td>Profesor</td>
+                <td>Activo</td>
+                <td>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca">Beca</button>
+                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                </td>
             </tr>
             <tr>
-                <th>123456789</th>
-                <th>Joel</th>
-                <th>Perez</th>
-                <th>jperez@prueba.com</th>
-                <th>Costa Rica</th>
-                <th>Cartago</th>
-                <th>Estudiante</th>
-                <th>Activo</th>
+                <td>123456789</td>
+                <td>Joel</td>
+                <td>Perez</td>
+                <td>jperez@prueba.com</td>
+                <td>Costa Rica</td>
+                <td>Cartago</td>
+                <td>Estudiante</td>
+                <td>Activo</td>
+                <td>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca">Beca</button>
+                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                </td>
             </tr>
         </tbody>
     </table>

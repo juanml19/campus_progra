@@ -105,23 +105,38 @@
 					
 					<div class="modal-body">
 					  
+					 <form>
 						<label for="usr">Materia:</label><br>
 					   <input type = "text" class="form-control" id = "idmateria"> </input><br>
 						<label for="asd">IDgrupo:</label><br>
 					   <input type = "text" class="form-control" id = "idgrupo"> </input><br>
 					   
 					   <label for="asd">Numero de grupo:</label><br>
-					    <input type="number" class="form-control" min="1" max="15" id = "idnumerogrupo">
-					 
+					    <input type="number" class="form-control" min="1" max="15" id = "idnumerogrupo" required onKeyPress="return SoloNumeros(event);">
 						<label for="asd">Horario:</label><br>
-					   <input type = "text" class="form-control" id = "idhorario"> </input><br>
-						
-					   <input type = "text"  class ="HiddenIndex" id ="HiddenIndex"  style="display:none"> </input>
-					   
+					   <input type="radio" name = "idhorario" value='LM' > Lunes-Mañana
+                        <input type="radio" name = "idhorario" value='LT'> Lunes-Tarde
+						<input type="radio" name = "idhorario" value='LN'> Lunes-Noche<br>
+                        <input type="radio" name = "idhorario" value='KM'> Martes-Mañana
+						<input type="radio" name = "idhorario" value='KT'> Martes-Tarde
+                        <input type="radio" name = "idhorario" value='KN'> Martes-Noche<br>
+						<input type="radio" name = "idhorario" value='MM'> Miércoles-Mañana
+                        <input type="radio" name = "idhorario" value='MT'> Miércoles-Tarde
+						<input type="radio" name = "idhorario" value='MN'> Miércoles-Noche<br>
+                        <input type="radio" name = "idhorario" value='JM'> Jueves-Mañana
+						<input type="radio" name = "idhorario" value='JT'> Jueves-Tarde
+                        <input type="radio" name = "idhorario" value='JN'> Jueves-Noche<br>
+						<input type="radio" name = "idhorario" value='VM'> Viernes-Mañana
+                        <input type="radio" name = "idhorario" value='VT'> Viernes-Tarde
+						<input type="radio" name = "idhorario" value='VN'> Viernes-Noche<br>
+                        <input type="radio" name = "idhorario" value='SM'> Sábado-Mañana
+						<input type="radio" name = "idhorario" value='ST'> Sábado-Tarde
+                        <input type="radio" name = "idhorario" value='SN'> Sábado-Noche <br>
+					   </form>
 					  <div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal" id ="closeMyModal">cancelar</button>
 						<button type="button"  class="btn btn-default" id = "Add"   onclick="Addrow()">agregar</button>	
-						<button type="button"  class="btn btn-default" id = "edit"   onclick="editRowBotton()" style="display:none"  >editar grupo</button>
+						<button type="button"  class="btn btn-default" id = "edit"   onclick="editRowBotton()" style="display:none" >editar grupo</button>
 					  </div>
 					  
 					</div>
@@ -158,6 +173,7 @@
 			</div>
 		</div>
     </div>
+</div>
     <footer class="background-gradient text-center">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
