@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function () {
     jQuery('.dataTable').DataTable( {
         "language": {
@@ -148,9 +147,9 @@ function SoloNumeros(evt){
 
 
 $(function () {
-    $('form').submit(function (event) { 
+    $('.form-login').submit(function (event) { 
     var input = $(this).children('.password').val();
-
+        console.log(input);
     var password = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$&+,:;=?@#|'<>.^*()%!-])(?!.*\s).{8,}$/);
 
     if (!password.test(input)) {  
@@ -310,10 +309,10 @@ $(function () {
     $('button').click(function () {
         $('#seccionParrafos').fadeToggle(1000);
     });
-})();
+});
 
 (function () {
-    $('form').submit(function (event) {
+    $('.form-parametros').submit(function (event) {
         var mensaje = "";
         var mensajeN = "";
         $('.validate').each(function () {
@@ -335,9 +334,9 @@ $(function () {
             event.preventDefault(event);
         }			
     });
-})();
+});
 (function () {
-    $('form').submit(function (event) {
+    $('.form-carrera').submit(function (event) {
         var mensaje = "";
         $('.validate').each(function () {
             if ($(this).val().trim().length < 5) {
@@ -350,9 +349,9 @@ $(function () {
             event.preventDefault(event);
         }
     });
-})();
+});
 (function () {
-    $('form').submit(function (event) {
+    $('.form-materia').submit(function (event) {
         var mensaje = "";
         var mensajeN = "";
         $('.validate').each(function () {
@@ -381,4 +380,4 @@ $(function () {
             event.preventDefault(event);				
         }
     });
-})();
+});

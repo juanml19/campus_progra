@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ingles II</title>
+		<title>Matricula</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -70,10 +70,70 @@
 				</nav>
 			</div>	
 		</div>	
-    
+    <h2>Prematriculados</h2>
+		<section id="tablaprematriculados">
+			<table id="prematicula" style="border:2px solid DodgerBlue";>
+				<tbody>
+					<tr>
+						<th style="width: 64px;" scope="row">Codigo</th>
+						<th style="width: 149.6px;" scope="row">Materia</th>
+						<th style="width: 10px;" scope="row">Requisito&nbsp;</th>
+						<th style="width: 101px;"scope="row">Costo</th>
+						<th style="width: 101px;">  </th>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+		</section>
+
+	<h2 class="navbar navbar-expand-lg no-border background-gradient">
+		<center><span style="color: #ffffff;">Disponibles</span></center>
+		</h2>
+		<section id="tablaMatricular"><center>
+			<table style="border:2px solid DodgerBlue;"id="Matricula">
+
+				<tbody >
+					<tr id="fila1">
+						<th style="width: 64px;" scope="row">Codigo</th>
+						<th style="width: 149.6px;" scope="row">Materia</th>
+						<th style="width: 10px;" scope="row">Requisito&nbsp;</th>
+						<th style="width: 101px;"scope="row">Costo</th>
+						
+						<th><strong>Matricular</strong></th>
+					</tr>
+					<tr id="fila2">
+						<td>BSI-10</td>
+						<td>Bases de datos 1</td>
+						<td>BSI-02</td>
+						<td>120.000</td>
+						<td id ="btnM">
+						<a href="javascript:Matricular('#fila2')" class="btn btn-primary" role="button">
+                        <span class="fa fa-plus"></span>
+                        </a>
+						</td>
+					</tr>
+					<tr id="fila3">
+						<td>BSI-09</td>
+						<td>Programacion 3</td>
+						<td>BSI-02</td>
+						<td>120.000</td>
+						<td id ="btnM">
+						<a href="javascript:Matricular('#fila3')" class="btn btn-primary" role="button">
+                        <span class="fa fa-plus"></span>
+                        </a>
+						</td>
+						
+					</tr>
+				</tbody>
+			
+			</table>
+			</center>
+		</section>
+	<a class="btn btn-primary" style="display:none" id ="Pago" href=Pagar.html>Realizar Pago</a>
     <div class="container"> 
     </div>
-    <footer class="background-gradient text-center">
+    <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
     <script src="../js/function.js"></script>
