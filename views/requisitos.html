@@ -73,7 +73,7 @@
     
     <div class="container"> 
      
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model_requisito">Nuevo requisito</button>
+      <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#model_requisito">Nuevo requisito</button>
 
     <!-- Modal -->
     <div id="model_requisito" class="modal fade" role="dialog">
@@ -85,7 +85,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
-                <div class="card">
+                <!-- <div class="card"> -->
                 <form method="post" class="card-body form-materia">
                     <div class="form-group">
                         <label>Código de Materia:</label>
@@ -103,12 +103,49 @@
                         <input type="submit" class="btn btn-primary pull-right" />
                     </div>
                 </form>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
 
       </div>
     </div>
+	
+	    <!-- Modal Edit-->
+    <div id="model_requisito_edit" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Editar  requisito</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+                <!-- <div class="card"> -->
+                <form method="post" class="card-body form-materia">
+                    <div class="form-group">
+                        <label>Código de Materia:</label>
+                        <input class="form-control validate" type="Código de Materia" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Código de Requisito:</label>
+                        <input class="form-control validate" type="Código de Requisito" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input class="form-control validate" type="Nombre" required />
+                    </div>
+					<div>
+                        <input type="submit" class="btn btn-primary pull-right" />
+                    </div>
+                </form>
+            <!-- </div> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+	
+	
 		<table title="Requisitos" class="table table-hover">
             <thead class="thead-light">
                 <tr>
@@ -120,42 +157,51 @@
             </thead>
             <tbody>
                 <tr>
-				    <td><a href="form-requisito.html" class="btn btn-primary" role="button">
-                        <span class="fa fa-edit"></span> </a></td>
+				   <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
+                        <span class="fa fa-edit"></span> </a>
+					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
+                        <span class="fas fa-trash-alt"></span> </a>
+					</td>
                     <td>MMM-003</td>
                     <td>MMM-002</td>
                     <td>Materia 003</td>
                 </tr>
                 <tr>
-                    <td><a href="form-requisito.html" class="btn btn-primary" role="button">
-					<span class="fa fa-edit"></span> </a></td>
-                    <td>MMM-002</td>
+                    <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
+                        <span class="fa fa-edit"></span> </a>
+					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
+                        <span class="fas fa-trash-alt"></span> </a>
+					</td>
+					<td>MMM-002</td>
                     <td>MMM-001</td>
                     <td>Materia 002</td>
 
                 </tr>
                 <tr>
-                    <td><a href="form-requisito.html" class="btn btn-primary" role="button">
-					<span class="fa fa-edit"></span> </a></td>
-                    <td>MMM-003</td>
+                    <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
+                        <span class="fa fa-edit"></span> </a>
+					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
+                        <span class="fas fa-trash-alt"></span> </a>
+					</td>
+					<td>MMM-003</td>
                     <td>MMM-001</td>
                     <td>Materia 003</td>
 
                 </tr>
             </tbody>
-            <tfoot class="table-dark">
-                <tr>
-                    <td></td>
-                    <td><strong>Lista de Requisitos...</strong></td>
-                    <td></td>
-                </tr>
-            </tfoot>
+            <tfoot class="table-light"> 
+			   <tr> 
+                    <td></td> 
+                    <td><a href="requisitos.html"> Anterior </a> 
+                        <a href="requisitos.html"> Siguiente </a> </td> 
+                </tr> 
+            </tfoot>             
         </table>
     </div>
     
     <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+    <script src="../js/FormMaterias.js"></script>
 	</body>
 </html>
