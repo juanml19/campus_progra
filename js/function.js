@@ -1,3 +1,17 @@
+//js login
+function validateLogin(){
+    var cellEmpty = true;
+    jQuery("input[type='text']:not(.HiddenIndex)").each(function(){
+        if(jQuery(this).val().trim() == ""){
+            jQuery(this).addClass("Error");
+            cellEmpty= false ;
+        }else{
+            jQuery(this).removeClass("Error");
+        }
+    });
+    return  cellEmpty;
+}
+
 jQuery(document).ready(function () {
     jQuery('.dataTable').DataTable( {
         "language": {
