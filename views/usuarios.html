@@ -14,12 +14,12 @@
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
  <!-- Css sheet-->
-    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/JJ/usuarios.css" />
    
 	</head>	
 <body>
-	<div class="row">
-			<div class="col-sm">
+		<div class="row">
+			<div class="col-sm-12">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,7 +44,7 @@
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="acciones.html">Acciones</a>
+						 
 						  <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
@@ -62,7 +62,7 @@
 							<a href="#" class='container-fluid nav-item' class="nombre-header">Username</a>
 						  </li> 
 						  <li>
-							<a class='container-fluid nav-item' href="login.html" class="boton-header"> Salir</a>
+							<a class='container-fluid nav-item' href="#" class="boton-header"> Salir</a>
 						  </li>  
 						</ul>  
 					</form>
@@ -70,9 +70,9 @@
 				</nav>
 			</div>	
 		</div>	
-        <div class="container">
+    <div class="container">
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#model_usuario">Nuevo Usuario</button>
+    <button type="button" class="btn btn-primary btn-md margin-20 nuevo-usuario" data-toggle="modal" data-target="#model_usuario">Nuevo Usuario</button>
 
     <!-- Modal -->
     <div id="model_usuario" class="modal fade" role="dialog">
@@ -80,28 +80,28 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Nuevo Usuario</h4>
+            <h4 class="modal-title titulo-form-usuario">Nuevo usuario</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
               <form action="#" name="nuevo_usuario" id="nuevo_usuario" method="post">
                   <div class="form-group">
-                    <input type="number" name="cedula" id="cedula" placeholder="Cedula">
+                    <input type="number" name="cedula" class="no-espacios" id="cedula" placeholder="Cedula">
                 </div>
                   <div class="form-group">
-                    <input type="text" name="nombre" class="not-number" required id="nombre" placeholder="Nombre">
+                    <input type="text" name="nombre" class="not-number no-espacios" required id="nombre" placeholder="Nombre">
                 </div>
                   <div class="form-group">
-                        <input type="text" name="apellido" class="not-number" required id="apellido" placeholder="Apellido">
+                        <input type="text" name="apellido" class="not-number no-espacios" required id="apellido" placeholder="Apellido">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="correo" required id="correo" placeholder="Correo">
+                        <input type="email" name="correo" required class="no-espacios" id="correo" placeholder="Correo">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="pais" class="not-number" required id="pais" placeholder="Pais">
+                        <input type="text" name="pais" class="not-number no-espacios" required id="pais" placeholder="Pais">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="ciudad" class="not-number" required id="ciudad" placeholder="Ciudad">
+                        <input type="text" name="ciudad" class="not-number no-espacios" required id="ciudad" placeholder="Ciudad">
                     </div>
                     <div class="form-group">
                         <label>Tipo: </label><select name="tipo" id="tipo">
@@ -142,7 +142,7 @@
           <div class="modal-body">
               <form action="#" name="beca" id="beca" method="post">
                   <div class="form-group">
-                    <input type="number" name="porcentaje" id="porcentaje" placeholder="Porcentaje Beca">
+                    <input type="number" name="porcentaje" id="porcentaje" class="no-espacios" placeholder="Porcentaje Beca">
                 </div>
                     <div class="form-group">
                         <input type="submit" value="Guardar" class="btn btn-success"/>
@@ -153,7 +153,7 @@
 
       </div>
     </div>
-     <table id="tabla_usuarios" class="dataTable table-striped table-bordered" cellspacing="0">
+     <table id="tabla_usuarios" class="dataTable table table-striped table-bordered" cellspacing="0">
         <thead>
             <tr>
                 <th>Cedula</th>
@@ -180,7 +180,7 @@
                 <td>Activo</td>
                 <td>
                     <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca"><i class="fas fa-graduation-cap"></i></button>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-warning btn-md editar-usuario" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
@@ -194,8 +194,7 @@
                 <td>Profesor</td>
                 <td>Activo</td>
                 <td>
-                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca"><i class="fas fa-graduation-cap"></i></button>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-warning btn-md editar-usuario" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
@@ -210,7 +209,7 @@
                 <td>Activo</td>
                 <td>
                     <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca"><i class="fas fa-graduation-cap"></i></button>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-warning btn-md editar-usuario" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
@@ -224,8 +223,7 @@
                 <td>Profesor</td>
                 <td>Activo</td>
                 <td>
-                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca"><i class="fas fa-graduation-cap"></i></button>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-warning btn-md editar-usuario" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
@@ -240,16 +238,16 @@
                 <td>Activo</td>
                 <td>
                     <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_beca"><i class="fas fa-graduation-cap"></i></button>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-warning btn-md editar-usuario" data-toggle="modal" data-target="#model_usuario"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
         </tbody>
     </table>
     </div>
-    <footer class="background-gradient text-center fixed-bottom">
+    <footer class="background-gradient text-center">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+    <script src="../js/JJ/usuarios.js"></script>
 	</body>
 </html>
