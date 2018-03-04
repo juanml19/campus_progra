@@ -73,7 +73,7 @@
     
     <div class="container"> 
  <section>
-            <h2>Parámetros Generales</h2>
+            <h2>Parámetros de Matrícula</h2>
             <div class="card">
                 <form method="post" class="card-body form-parametros">
                     <div class="form-group">
@@ -86,11 +86,11 @@
                     </div>
                     <div class="form-group">
                         <label>Porcentaje de descuento para Matrícula en Línea:</label>
-                        <input class="form-control validate" type="number" required />
+                        <input class="form-control validate" type="number" min=0 max=100 required />
                     </div>
                     <div class="form-group">
                         <label>Máximo de Créditos por Matrícula-Estudiante:</label>
-                        <input class="form-control validate" type="number" max=20  required />
+                        <input class="form-control validate" type="number" min=0 max=20  required />
                     </div>
                     <div>
                         <input type="submit" class="btn btn-primary pull-right" />
@@ -104,6 +104,7 @@
     <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+	<script src="../js/ParamGenerales.js"></script>
+	    
 	</body>
 </html>
