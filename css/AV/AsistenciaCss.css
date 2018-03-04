@@ -1,0 +1,88 @@
+body { 
+    margin: 0;
+    padding:0;
+    background-size: cover;
+    background-position: center;
+	font-family: Roboto Condensed, Helvetica Neue, sans-serif;
+}
+   
+.titleheaders{
+	margin:30px; 
+	text-align:center;
+}
+  
+footer{   
+    color: #ffffff;
+    text-align: right; 
+	height: 30px;
+    color: #ffffff;
+    text-align: center; 
+}  
+
+a:hover {
+    color: black;
+    text-decoration: none;
+} 
+
+.background-gradient {
+    background: linear-gradient(to right, rgb(0, 163, 197) 1%, rgb(171, 206, 53) 100%);
+}
+
+nav a{
+    color: white;
+}
+ 
+.boton-header {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    width: 75px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.boton-header:hover {
+    border: 2px solid #00a3c5;
+    background: #00a3c5;
+    color: #ffffff;
+    transition: all .5s ease;
+    }
+
+.nombre-header {
+    font-size: 22px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.notificaciones-header {
+    font-size: 24px;
+    display: inline-block;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #00a3c5;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: #ffffff;
+} 
