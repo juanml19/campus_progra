@@ -14,12 +14,12 @@
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
  <!-- Css sheet-->
-    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/GrupoMatriculaPago.css" />
    
 	</head>	
 <body>
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-12">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -70,28 +70,31 @@
 				</nav>
 			</div>	
 		</div>	
-    <h2>Prematriculados</h2>
+		 <div class="container"> 
+   <center> <h2>Prematriculados</h2>
 		<section id="tablaprematriculados">
-			<table id="prematicula" style="border:2px solid DodgerBlue";>
+			<table id="prematicula" class="table" >
 				<tbody>
 					<tr>
 						<th style="width: 64px;" scope="row">Codigo</th>
 						<th style="width: 149.6px;" scope="row">Materia</th>
 						<th style="width: 10px;" scope="row">Requisito&nbsp;</th>
 						<th style="width: 101px;"scope="row">Costo</th>
-						<th style="width: 101px;">  </th>
+						<th style="width: 101px;">Opciones</th>
 					</tr>
 				</tbody>
 			</table>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
+			</center>
 		</section>
-
-	<h2 class="navbar navbar-expand-lg no-border background-gradient">
-		<center><span style="color: #ffffff;">Disponibles</span></center>
-		</h2>
-		<section id="tablaMatricular"><center>
-			<table style="border:2px solid DodgerBlue;"id="Matricula">
+</div>
+ 
+	<h2 class="background-gradient text-center">
+		<p style="color: #ffffff;" id = "Dispo">Disponibles</p></h2>
+		<div class="container"> <center>
+		<section id="tablaMatricular">
+			<table  class="table" id="Matricula">
 
 				<tbody >
 					<tr id="fila1">
@@ -100,42 +103,43 @@
 						<th style="width: 10px;" scope="row">Requisito&nbsp;</th>
 						<th style="width: 101px;"scope="row">Costo</th>
 						
-						<th><strong>Matricular</strong></th>
+						<th>Matricular</th>
 					</tr>
 					<tr id="fila2">
-						<td>BSI-10</td>
-						<td>Bases de datos 1</td>
-						<td>BSI-02</td>
-						<td>120.000</td>
-						<td id ="btnM">
-						<a href="javascript:Matricular('#fila2')" class="btn btn-primary" role="button">
-                        <span class="fa fa-plus"></span>
-                        </a>
+						<th style="width: 64px;" scope="row">BSI-10</td>
+						<td style="width: 149.6px;" scope="row">Bases de datos 1</td>
+						<td style="width: 10px;" scope="row">BSI-02</td>
+						<td style="width: 101px;"scope="row">120.000</td>
+						<td style="width: 101px;" >
+						<input type="button" value='+'  class="btn btn-primary" id ="btnMa" >
 						</td>
 					</tr>
 					<tr id="fila3">
-						<td>BSI-09</td>
-						<td>Programacion 3</td>
-						<td>BSI-02</td>
-						<td>120.000</td>
-						<td id ="btnM">
-						<a href="javascript:Matricular('#fila3')" class="btn btn-primary" role="button">
-                        <span class="fa fa-plus"></span>
-                        </a>
+						<th style="width: 64px;" scope="row">BSI-09</td>
+						<td style="width: 149.6px;">Programacion 3</td>
+						<td style="width: 10px;" scope="row">BSI-02</td>
+						<td style="width: 101px;"scope="row">120.000</td>
+						<td style="width: 101px;">
+						<input type="button" value='+'  class="btn btn-primary" id ="btnMa1" >
 						</td>
-						
 					</tr>
 				</tbody>
-			
 			</table>
 			</center>
+			<p>&nbsp;</p>
+        
+			<a class="btn btn-primary" style="display:none" id ="Pago" href=Pagar.html>Realizar Pago
+			 <span class="far fa-money-bill-alt"></span>
+			</a>
+			
 		</section>
-	<a class="btn btn-primary" style="display:none" id ="Pago" href=Pagar.html>Realizar Pago</a>
+		</div>
+	
     <div class="container"> 
     </div>
-    <footer class="background-gradient text-center fixed-bottom">
+    <footer class="background-gradient text-center">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+   <script src="../js/GrupoMatriculaPago.js"></script>
 	</body>
 </html>
