@@ -1,8 +1,8 @@
-
+//---------------------------------
 jQuery(document).ready(function () {
-    jQuery('.tables').DataTable( {
+    jQuery('.dataTable').DataTable( {
         "language": {
-            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+            "url": "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
         }
     });
     
@@ -12,6 +12,12 @@ jQuery(document).ready(function () {
     });
 	jQuery("#myModal").on('hidden.bs.modal', function (){
         cleanModalForm();
+    });
+    jQuery('.not-number').keyup(function (e) {
+        if (!/^[ a-záéíóúüñ]*$/i.test(this.value)) {
+            console.log(this.value);
+            this.value = this.value.replace(/[^ a-záéíóúüñ]+/ig,"");
+        }
     });
 });
 function Matricular(text) {
@@ -37,29 +43,18 @@ function validateMyForm(){
     });
     return  cellEmty;
 }
-	
-function validateMyFirstForm(){
-    var cellEmty = true;
-    jQuery(".HiddenIndex:not(#HiddenIndex)").each(function(){
-        if(jQuery(this).val().trim() == ""){
-			jQuery(this).addClass("Error");
-			 cellEmty= false ;
-        }else{
-            jQuery(this).removeClass("Error");}
-    })
-    return  cellEmty;
-}
-		
+
 function Addrow(){
-    if(validateMyForm()){	
-        var Data = [jQuery("#idmateria").val(), jQuery("#idgrupo").val(),jQuery("#idnumerogrupo").val(), jQuery("#idhorario").val()
-				, "<td><button type=\"button\" class=\"glyphicon glyphicon-trash\" onclick = \"removeRow((this))\"></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"glyphicon glyphicon-pencil\"> </td>" ];
-				jQuery('#datatable').DataTable().row.add(Data).draw();
-				
-				jQuery("#closeMyModal").click(); //Cerrar modal 
-				jQuery("#show").prop("disabled", false);
-			}
-		}
+   if(validateMyForm())
+   { 
+    var Data = [$("#idmateria").val(), $("#idgrupo").val(),$("#idnumerogrupo").val(),  document.querySelector('input[name=idhorario]:checked').value
+    , "<td><button type=\"button\" class=\"glyphicon glyphicon-trash\" onclick = \"removeRow((this))\"></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"glyphicon glyphicon-pencil\"> </td>" ];
+    $('#datatable').DataTable().row.add(Data).draw();
+    
+    $("#closeMyModal").click();
+    $("#show").prop("disabled", false);
+   }
+  }
 		
 		function cleanModalForm(){
 			jQuery("input[type='text']:not(.HiddenIndex)").val("");
@@ -118,7 +113,22 @@ function Addrow(){
 				jQuery("#closeMyModal").click();
 			}
 		}
-		
+function SoloNumeros(evt){
+            if(window.event){//asignamos el valor de la tecla a keynum
+            keynum = evt.keyCode; //IE
+            }
+            else{
+            keynum = evt.which; //FF
+             } 
+ //comprobamos si se encuentra en el rango numérico y que teclas no recibirá.
+             if((keynum > 47 && keynum < 58) || keynum == 8 || keynum == 13 || keynum == 6 ){
+            return true;
+            }
+             else{
+          return false;
+         }
+         }		
+
 		function showMyObj(){
 			if(validateMyFirstForm())
 			{
@@ -135,25 +145,6 @@ function Addrow(){
 			}
 			else{ console.log ("vacio")}
 		}
-
-
-$(function () {
-    $('form').submit(function (event) { 
-    var input = $(this).children('.password').val();
-
-    var password = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$&+,:;=?@#|'<>.^*()%!-])(?!.*\s).{8,}$/);
-
-    if (!password.test(input)) {  
-     $(".alerthidden").removeClass('fade'); 
-     $(".alerthidden").addClass('show'); 
-     event.preventDefault(event);   
-    }
-    else{ 
-     $(".alerthidden").addClass('fade'); 
-     $(".alerthidden").removeClass('show'); 
-    }
-    });
-   });
 
 
 //asistencia
@@ -296,4 +287,79 @@ $(function () {
 		}
 		
 		
-	
+	(function () {
+    $('button').click(function () {
+        $('#seccionParrafos').fadeToggle(1000);
+    });
+});
+
+(function () {
+    $('.form-parametros').submit(function (event) {
+        var mensaje = "";
+        var mensajeN = "";
+        $('.validate').each(function () {
+			var label = $('label', this.parentElement).text();
+			var value = $( this ).val();
+
+			if (value < 0) 
+		    {
+                var label = $('label', this.parentElement).text();
+                mensajeN += "\n"+label.substring(0, label.length - 1);	
+			}
+        });
+		if (mensajeN != "") {
+            alert("Los siguientes campos no puede ser menor a 0:\n"+mensajeN);
+            event.preventDefault(event);				
+        }
+		if (document.getElementById("FecIniMO").value > document.getElementById("FecIniME").value) {
+			alert("Fecha de Matrícula Extraordinaria ANTERIOR a Ordinaria\n");
+            event.preventDefault(event);
+        }			
+    });
+});
+(function () {
+    $('.form-carrera').submit(function (event) {
+        var mensaje = "";
+        $('.validate').each(function () {
+            if ($(this).val().trim().length < 5) {
+                var label = $('label', this.parentElement).text();
+                mensaje += "\n"+label.substring(0, label.length - 1);
+            }
+        });
+        if (mensaje != "") {
+            alert("Los siguiente campos tienen menos de 5 characteres:\n"+mensaje);
+            event.preventDefault(event);
+        }
+    });
+});
+(function () {
+    $('.form-materia').submit(function (event) {
+        var mensaje = "";
+        var mensajeN = "";
+        $('.validate').each(function () {
+			var label = $('label', this.parentElement).text();
+			var value = $( this ).val();
+
+			if (($(this).val().trim().length < 5) && (label.substring(0, label.length - 1) != "Precio")
+				                                  && (label.substring(0, label.length - 1) != "Créditos"))
+		    {
+                var label = $('label', this.parentElement).text();
+                mensaje += "\n"+label.substring(0, label.length - 1);
+            }
+
+			if (value < 0) 
+		    {
+                var label = $('label', this.parentElement).text();
+                mensajeN += "\n"+label.substring(0, label.length - 1);	
+			}
+        });
+        if (mensaje != "") {
+            alert("Los siguiente campos tienen menos de 5 caracteres:\n"+mensaje);
+            event.preventDefault(event);
+        }
+		if (mensajeN != "") {
+            alert("Los siguientes campos no puede ser menor a 0:\n"+mensajeN);
+            event.preventDefault(event);				
+        }
+    });
+});

@@ -1,35 +1,102 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>CV - Home</title>
-    
+    <meta charset='utf-8'>
+	<title>CV - Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   <link rel="stylesheet" href="../css/site.css" />
-</head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Jquery -->
+	
+	<link rel="stylesheet" href="../css/site.css" /> 
+	
+    </head>
     
 <body class="menu">
-<div class="margin">     
-    <div class="list-group">
-  <a href="#" class="item list-group-item list-group-item-action align-self-stretch"> Mi perfil </a>
-  <a href="cursos.html" class="item list-group-item list-group-item-action align-self-stretch">Cursos</a>
-  <a href="asistencia.html" class="item list-group-item list-group-item-action align-self-stretch">Asistencias y notas</a>
-  <a href="#" class="item list-group-item list-group-item-action align-self-stretch">Matrícula</a>
-  <a href="evaluacionD.html" class="item list-group-item list-group-item-action align-self-stretch">Evaluación de maestros</a>
-    </div>
-</div>
-<!--    
-<footer class="footer">
-   <input class="btn btn-primary btn-sm" type="text" value="Tipo usuario" disabled>
-    </footer>
-    -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+            <img class="first-slide" src="https://www.timeshighereducation.com/sites/default/files/institution/header_image/swansea-university-campus.jpg" >
+          </div>
+          
+            <div class="carousel-item">
+            <img class="second-slide" src="http://www.educationplanner.org/images/landing-page/promo-students.jpg">
+          </div>
+            
+          <div class="carousel-item">
+            <img class="third-slide" src="https://www.sfu.ca/content/sfu/education/teachersed/programs/heart/overview/jcr:content/main_content/textimage/image.img.1280.high.jpg/1490731486857.jpeg">
+          </div>
+        </div>
+          
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+
+
+<section>
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+       <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="books.png" >
+            <p><a class="btn btn-primary btn-lg" href="cursos.html" role="button"> Cursos &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          
+            <div class="col-lg-4">
+            <img class="rounded-circle" src="pencil.png">
+            <p><a class="btn btn-primary btn-lg" href="asistencia.html" role="button">Asistencias y notas &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          
+            <div class="col-lg-4">
+            <img class="rounded-circle" src="grad-cap.png">
+            <p><a class="btn btn-primary btn-lg" href="matricula.html" role="button">Matricula &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+            
+            <div class="col-lg-4">
+            <img class="rounded-circle" src="file.png">
+            <p><a class="btn btn-primary btn-lg" href="evaluacionD.html" role="button">Evaluación Docente &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+            
+                <div class="col-lg-4">
+            <img class="rounded-circle" src="menu-users.png">
+            <p><a class="btn btn-primary btn-lg" href="usuarios.html" role="button">Usuarios &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+            
+            <div class="col-lg-4">
+            <img class="rounded-circle" src="menu-user.png">
+            <p><a class="btn btn-primary btn-lg" href="login.html" role="button">Salir &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+            
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    </section>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    
+    </body>
 </html>

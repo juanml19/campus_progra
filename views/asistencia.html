@@ -3,33 +3,27 @@
 	<head>
 		<title>Asistencia</title>
 		
-			
+	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- MetisMenu CSS -->
-    <link href="./bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-    <!-- DataTables CSS -->
-    <link href="./bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- Css sheet-->
-    <link rel="stylesheet" href="../css/site.css" />
-	<!--FontAwesome-->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
-	
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+ <!-- Css sheet-->
+    <link rel="stylesheet" href="../css/AV/AsistenciaCss.css" />
+   <script src="../js/AV/AsistenciaJs.js"></script> 
 	</head>
 	
 	<body> 
 		<div class="row">
 			<div class="col-sm">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
-				  <a class="navbar-brand" href="#">Universidad</a>
+				  <a class="navbar-brand" href="home.html">Universidad</a>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 					  <li class="nav-item active">
@@ -38,20 +32,38 @@
 					  <li class="nav-item">
 						<a class="nav-link" href="asistencia.html">Asistencias</a>
 					  </li>
-                        <li class="nav-item">
-						<a class="nav-link" href="#">Matrícula</a>
+                    <li class="nav-item">
+						<a class="nav-link" href="matricula.html">Matrícula</a>
 					  </li>
-					  <li class="nav-item">
+                    <li class="nav-item">
+						<a class="nav-link" href="cursos.html">Cursos</a>
+					  </li>
+                    <li class="nav-item">
 						<a class="nav-link" href="evaluacionD.html">Evaluación Docente</a>
+					  </li>
+                       <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Configuración
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="parametros.html">Parametros</a>
+						  <a class="dropdown-item" href="carreras.html">Carreras</a>
+						  <a class="dropdown-item" href="materias.html">Materias</a>
+						  <a class="dropdown-item" href="requisitos.html">Requisitos</a>
+						  <a class="dropdown-item" href="tipos_usuarios.html">Tipos Usuarios</a>
+						</div>
+					  </li>
+                      <li class="nav-item">
+						<a class="nav-link" href="usuarios.html">Usuarios</a>
 					  </li>
 					</ul>
 					<form class="form-inline my-2 my-lg-0">
 						<ul class="navbar-nav mr-auto">
 						  <li>
-							<a class='container-fluid nav-item' class="nombre-header" href="#">Username</a>
+							<a href="#" class='container-fluid nav-item' class="nombre-header">Username</a>
 						  </li> 
 						  <li>
-							<a class='container-fluid nav-item' class="boton-header" href="login.html"> Salir</a>
+							<a class='container-fluid nav-item' href="login.html" class="boton-header"> Salir</a>
 						  </li>  
 						</ul>  
 					</form>
@@ -79,7 +91,7 @@
 									<li class="list-group-item">Carla Daniela Zepeda
 										<input class="btn float-right btn bg-success text-white col-12 col-md-3" type='button' value="Presente">
 									</li>
-									<li class="list-group-item">Armando Alfonso Ramirez
+									<li class="list-group-item">Armando Alfonzo Ramirez
 										<input class="btn float-right btn bg-success text-white col-12 col-md-3" type='button' value="Presente">
 									</li>
 									<li class="list-group-item">Juan Manuel Jimenez
@@ -105,8 +117,5 @@
 <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script     src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="../js/function.js"></script> 
-	</body>
+     </body>
 </html>

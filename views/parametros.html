@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Cursos</title>
+		<title>Parametros</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -18,7 +18,7 @@
    
 	</head>	
 	<body> 
-		<div class="row">
+			<div class="row">
 			<div class="col-sm">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
@@ -44,7 +44,8 @@
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						   <a class="dropdown-item" href="parametros.html">Parametros</a>
+						 
+						  <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
 						  <a class="dropdown-item" href="requisitos.html">Requisitos</a>
@@ -70,21 +71,40 @@
 			</div>	
 		</div>	
     
-    <div class="container container-menu"> 
-         <h4 class="titleheaders">Mis cursos</h4>
-        <div class="list-group">
-  <a href="programacion.html" class="list-group-item list-group-item-action"> Programación I</a>
-  <a href="ingles.html" class="list-group-item list-group-item-action">Ingles II</a>
-  <a href="calculo.html" class="list-group-item list-group-item-action">Cálculo I</a>
-  <a href="historia.html" class="list-group-item list-group-item-action"> Historia económica de Costa Rica</a>
-  <a href="introInfor.html" class="list-group-item list-group-item-action">Introducción a la informática</a>
-</div>
-    </div>
+    <div class="container"> 
+ <section>
+            <h2>Parámetros de Matrícula</h2>
+            <div class="card">
+                <form method="post" class="card-body form-parametros">
+                    <div class="form-group">
+                        <label>Fecha de Inicio de Matrícula Ordinaria</label>
+                        <input id="FecIniMO"  class="form-control validate" type="date" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de Inicio de Matrícula Extraordinaria:</label>
+                        <input id="FecIniME" class="form-control validate" type="date" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Porcentaje de descuento para Matrícula en Línea:</label>
+                        <input class="form-control validate" type="number" min=0 max=100 required />
+                    </div>
+                    <div class="form-group">
+                        <label>Máximo de Créditos por Matrícula-Estudiante:</label>
+                        <input class="form-control validate" type="number" min=0 max=20  required />
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-primary pull-right" />
+                    </div>
+                </form>
+            </div>
+        </section>
+   </div>
     
     
     <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+	<script src="../js/ParamGenerales.js"></script>
+	    
 	</body>
 </html>
