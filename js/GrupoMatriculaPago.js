@@ -16,11 +16,11 @@ $('#btnMa').click(function(){
 
 $('#btnMa1').click(function(){
     var elemento=document.querySelector('#btnMa1');
-		
          elemento.setAttribute("value", "-");
 		 Matricular('#fila3');
+	
 });
-			
+		 
 		} );
 		
 		function validateMyForm(){
@@ -178,7 +178,14 @@ $('#btnMa1').click(function(){
 		
 			document.getElementById("Pago").style = "visibility:visible"
 		}
+	function DesMatricular(text) {
+		
+			var row = $(text).detach();
 	
+			$("#Matricula").append(row);
+			ShowTablas();
+			                
+		}
 		
 		function OcultarTablas(){
 	
@@ -189,16 +196,19 @@ $('#btnMa1').click(function(){
 	document.getElementById("Matricula").style = "display:none";
 }
 }
-	function OcultarTablas(){
+
+	function ShowTablas(){
 	
 			var num = 	document.getElementById('Matricula').getElementsByTagName('tr').length-1;
 	
-       if(num==0){
-	document.getElementById("Dispo").style = "display:none";
-	document.getElementById("Matricula").style = "display:none";
+       if(num>0){
+	document.getElementById("Dispo").style = "visibility:visible"
+	document.getElementById("Matricula").style = "visibility:visible";
+}
+if(num==2){
+		document.getElementById("Pago").style = "display:none";
 }
 }
-
 
 
   	

@@ -96,30 +96,42 @@
 						<label for="usr">Materia:</label><br>
 					   <input type = "text" class="form-control" id = "idmateria" required onKeyPress="return Alfanumericos(event);"> </input><br>
 						<label for="asd">IDgrupo:</label><br>
-					   <input type = "text" class="form-control" id = "idgrupo" maxlength="5" required> </input><br>
+					   <input type = "text" class="form-control" id = "idgrupo" maxlength="5" required onKeyPress="return Alfanumericos(event);"> </input><br>
 					   <label for="asd">Numero de grupo:</label><br>
 		
 					 <input  type="number" id="idnumerogrupo"  min ='1'class="form-control" required onKeyPress="return SoloNumeros(event);"><br>
 						<label for="asd">Horario:</label><br>
 						<form >
-						<input type="radio" name = "idhorario" value='LM' > Lunes-Mañana
-                        <input type="radio" name = "idhorario" value='LT'> Lunes-Tarde
-						<input type="radio" name = "idhorario" value='LN'> Lunes-Noche<br>
-                        <input type="radio" name = "idhorario" value='KM'> Martes-Mañana
-						<input type="radio" name = "idhorario" value='KT'> Martes-Tarde
-                        <input type="radio" name = "idhorario" value='KN'> Martes-Noche<br>
-						<input type="radio" name = "idhorario" value='MM'> Miércoles-Mañana
-                        <input type="radio" name = "idhorario" value='MT'> Miércoles-Tarde
-						<input type="radio" name = "idhorario" value='MN'> Miércoles-Noche<br>
-                        <input type="radio" name = "idhorario" value='JM'> Jueves-Mañana
-						<input type="radio" name = "idhorario" value='JT'> Jueves-Tarde
-                        <input type="radio" name = "idhorario" value='JN'> Jueves-Noche<br>
-						<input type="radio" name = "idhorario" value='VM'> Viernes-Mañana
-                        <input type="radio" name = "idhorario" value='VT'> Viernes-Tarde
-						<input type="radio" name = "idhorario" value='VN'> Viernes-Noche<br>
-                        <input type="radio" name = "idhorario" value='SM'> Sábado-Mañana
-						<input type="radio" name = "idhorario" value='ST'> Sábado-Tarde
-                        <input type="radio" name = "idhorario" value='SN'> Sábado-Noche <br>
+						<table class="table">
+						<td><input type="radio" name = "idhorario" value='LM'>Lunes-Mañana  </td>    
+                        <td><input type="radio" name = "idhorario" value='LT'>Lunes-Tarde  </td>
+						<td><input type="radio" name = "idhorario" value='LN'>Lunes-Noche  </td>
+						<tr>
+                        <td><input type="radio" name = "idhorario" value='KM'>Martes-Mañana</td>
+						<td><input type="radio" name = "idhorario" value='KT'>Martes-Tarde</td>
+                        <td><input type="radio" name = "idhorario" value='KN'>Martes-Noche </td>
+						</tr>
+						<tr>
+						<td><input type="radio" name = "idhorario" value='MM'>Miércoles-Mañana</td>
+                        <td><input type="radio" name = "idhorario" value='MT'>Miércoles-Tarde</td>
+						<td><input type="radio" name = "idhorario" value='MN'>Miércoles-Noche</td>
+						</tr>
+						<tr>
+                        <td><input type="radio" name = "idhorario" value='JM'>Jueves-Mañana</td>
+						<td><input type="radio" name = "idhorario" value='JT'>Jueves-Tarde</td>
+                        <td><input type="radio" name = "idhorario" value='JN'>Jueves-Noche  </td>
+						</tr>
+						<tr>
+						<td><input type="radio" name = "idhorario" value='VM'>Viernes-Mañana</td>
+                        <td><input type="radio" name = "idhorario" value='VT'>Viernes-Tarde</td>
+						<td><input type="radio" name = "idhorario" value='VN'>Viernes-Noche </td>
+						</tr>
+						<tr>
+                        <td><input type="radio" name = "idhorario" value='SM'>Sábado-Mañana</td>
+						<td><input type="radio" name = "idhorario" value='ST'>Sábado-Tarde</td>
+                        <td><input type="radio" name = "idhorario" value='SN'>Sábado-Noche </td>
+						<tr>
+						</table>
 					   </form>
 						
 					  
