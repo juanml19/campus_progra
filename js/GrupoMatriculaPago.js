@@ -135,6 +135,21 @@ $('#btnMa1').click(function(){
           return false;
          }
          }
+		 
+		 	function Alfanumericos(evt){
+            if(window.event){
+            keynum = evt.keyCode; 
+            }
+            else{
+            keynum = evt.which; 
+             } 
+             if((keynum > 47 && keynum < 58) || keynum == 8 || keynum == 13 || keynum == 6 ||(keynum > 64 && keynum < 91) ||(keynum > 96 && keynum < 123) ){
+            return true;
+            }
+             else{
+          return false;
+         }
+         }
 		function showMyObj(){
 			if(validateMyFirstForm())
 			{
