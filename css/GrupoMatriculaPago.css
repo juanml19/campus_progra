@@ -3,6 +3,7 @@ body {
     padding:0;
     background-size: cover;
     background-position: center;
+	font-family: Roboto Condensed, Helvetica Neue, sans-serif;
 }
 
 .Error{
