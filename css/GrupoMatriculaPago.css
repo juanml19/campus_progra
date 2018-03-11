@@ -10,7 +10,9 @@ body {
     border: solid 1px red;
 }
 
-
+h1 {
+    text-align: center;
+}
 .carousel{
 	margin: 10px 0 0 10px;  
 }
@@ -294,3 +296,4 @@ textarea {
 }
 
 /*Bootstrap*/
+
