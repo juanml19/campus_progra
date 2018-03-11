@@ -10,9 +10,6 @@ body {
     border: solid 1px red;
 }
 
-h1 {
-    text-align: center;
-}
 .carousel{
 	margin: 10px 0 0 10px;  
 }
@@ -127,14 +124,6 @@ footer {
     top: -50px;
     left: calc(50% - 50px);
     
-}
-
-
-h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
 }
 
 .login-box p{
