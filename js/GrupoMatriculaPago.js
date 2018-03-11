@@ -2,7 +2,7 @@
 			$(document).ready(function() {
 			
 			$('#datatable').dataTable({responsive: true});
-								
+					$('#datatableMaterias').dataTable({responsive: true});			
 			$("#myModal").on('hidden.bs.modal', function () {
 			cleanModalForm();})
 				
@@ -134,7 +134,8 @@ $('#btnEnviar').click(function(){
 			if(validateMyForm())
 			{	
 				var Data = [$("#idmateria").val(), $("#idgrupo").val(),$("#idnumerogrupo").val(),  document.querySelector('input[name=idhorario]:checked').value
-				, "<td><button type=\"button\" class=\"glyphicon glyphicon-trash\" onclick = \"removeRow((this))\"></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"glyphicon glyphicon-pencil\"> </td>" ];
+				, "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit\"></i></button> </td>" ];
+						//<i class=\"fas fa-trash-alt\"></i></button>
 				$('#datatable').DataTable().row.add(Data).draw();
 				
 				$("#closeMyModal").click();
@@ -187,12 +188,15 @@ $('#btnEnviar').click(function(){
 		}
 
 		
-		function editRowBotton(){	
+	function editRowBotton(){	
 			
 			if(validateMyForm())
 			{	
 			
-				var Data = [$("#idmateria").val(), $("#idgrupo").val(),$("#idnumerogrupo").val(), document.querySelector('input[name=idhorario]:checked').value,  "<td><button type=\"button\" class=\"glyphicon glyphicon-trash\" onclick = \"removeRow((this))\"></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"glyphicon glyphicon-pencil\"> </td>", " <input type = \"text\" class=\"form-control\" id = \"HiddenIndex\"  style=\"display:none\"> </input>" ];
+				var Data = [$("#idmateria").val(), $("#idgrupo").val(),$("#idnumerogrupo").val(), document.querySelector('input[name=idhorario]:checked').value,  "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td><td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit\"></i></button> </td>", " <input type = \"text\" class=\"form-control\" id = \"HiddenIndex\"  style=\"display:none\"> </input>" ];
+				
+				
+				
 				$('#datatable').DataTable()
 				.row($("#HiddenIndex").val()).data(Data).draw();
 				
@@ -292,7 +296,96 @@ if(num==2){
 		document.getElementById("Pago").style = "display:none";
 }
 }
+//juan
+function Addrow2(){
+			//cod-carr-nom-cred-precio
+			if(validateMyForm())
+			{	
+				var Data = [$("#cod").val(), $("#carr").val(),$("#nom").val(),$("#cred").val(),$("#precio").val(),"<td><a  class=\"btn btn-primary\" href = \"grupos.html\" role=\"button\"><i class=\"fa fa-plus\"></i></a></td>",
+				 "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit\"></i></button> </td>" ];
+						//<i class=\"fas fa-trash-alt\"></i></button>
+				$('#datatableMaterias').DataTable().row.add(Data).draw();
+				
+				$("#closeMyModal").click();
+				$("#show").prop("disabled", false);
+			}
+		}
+		function removeRow2(bottom){
 
+			var ActualRow = $(bottom).parents("tr");			         
+			DeleteForm(ActualRow);
+			$("#btn_modalDelete").click(); // open the modal for delete row 
+
+		}
+		
+		function DeleteForm2(ActualRow){
+		
+			$("#yesDelete").click( function(){	
+			
+				$('#datatableMaterias').DataTable().row(ActualRow).remove().draw();
+				
+				var tableLength = $('#datatableMaterias').DataTable().column( 0 ).data().length;	
+				if(tableLength== 0){
+					$("#show").prop("disabled", true);
+				}
+				$("#closeDeleteModal").click();
+			})	
+			
+		}
+		
+		function editRow2(bottom){	
+			$("#Add").css("display", "none");
+			$("#edit").css("display", "inline");
+			$("#titleModel").text("Editar");
+			var ActualRow = $(bottom).parents("tr");
+			var rowIndex = $('#datatableMaterias').DataTable().row(ActualRow).index();
+			var row = $('#datatableMaterias').DataTable().row(rowIndex).data()
+			
+			$("#cod").val()(row[0]); 
+			$("#carr").val()(row[1]);
+			$("#nom").val()(row[2]);
+			$("#cred").val()(row[3]);
+			$("#precio").val()(row[4]);
+			
+			$("#HiddenIndex").val(rowIndex);			
+		}
+
+		
+		function editRowBotton2(){	
+			
+			if(validateMyForm())
+			{	
+			
+				var Data = [$("#cod").val(), $("#carr").val(),$("#nom").val(),$("#cred").val(),$("#precio").val(),"<td><a  class=\"btn btn-primary\" href = \"grupos.html\" role=\"button\"><i class=\"fa fa-plus\"></i></a></td>",  "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td><td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit\"></i></button> </td>", " <input type = \"text\" class=\"form-control\" id = \"HiddenIndex\"  style=\"display:none\"> </input>" ];
+				
+				
+				
+				$('#datatableMaterias').DataTable()
+				.row($("#HiddenIndex").val()).data(Data).draw();
+				
+				$("#Add").css("display", "inline");
+				$("#edit").css("display", "none");
+				$("#titleModel").text("Agregar una nueva materia");
+					$("#closeMyModal").click();
+		
+			}
+		}
+  		function showMyObj2(){
+			if(validateMyFirstForm())
+			{
+				var myData2 = [];
+				$("tbody tr").each(function ( value, index ) {
+					var rowIndex = $('#datatableMaterias').DataTable().row(value).index();
+					var row = $('#datatableMaterias').DataTable().row(rowIndex).data()
+					var obj = {first: row[0] , second :row[1],third: row[2],fourth: row[3],fifth:row[4]}
+					myData.push(obj);
+				} );
+				
+				var obj2 = {first:$("#cod").val(), second:$("#carr").val(),third:$("#nom").val(), fourth:$("#cred").val(), fifth:$("#precio").val(),sixth: myData2}
+				console.log(obj2)
+			}
+			else{ console.log ("vacio")}
+		}
 
 
 
