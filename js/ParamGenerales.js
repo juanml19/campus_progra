@@ -1,5 +1,4 @@
-﻿
-	   	var today = new Date();
+﻿	   	var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1;
         var yyyy = today.getFullYear();
@@ -39,11 +38,11 @@
 			}
         });
 		if (mensajeN != "") {
-            alert("Los siguientes campos no puede ser menor a 0:\n"+mensajeN);
+            alert("Los siguientes campos no pueden ser menor a 0:\n"+mensajeN);
             event.preventDefault(event);				
         }
 		if (document.getElementById("FecIniMO").value > document.getElementById("FecIniME").value) {
-			alert("Fecha de Matrícula Extraordinaria ANTERIOR a Ordinaria\n");
+			alert("Fecha de matrícula extraordinaria ANTERIOR a ordinaria\n");
             event.preventDefault(event);
         }			
     });

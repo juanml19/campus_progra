@@ -5,12 +5,14 @@ jQuery(document).ready(function () {
         },
         responsive: true
     });
+    
     jQuery('.not-number').keyup(function (e) {
         if (!/^[ a-záéíóúüñ]*$/i.test(this.value)) {
             console.log(this.value);
             this.value = this.value.replace(/[^ a-záéíóúüñ]+/ig,"");
         }
     });
+    
     jQuery('.no-espacios').keyup(function (e) {
         var value = jQuery(this).val();
         console.log("asdas"+value+"Adsdas")

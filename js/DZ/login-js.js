@@ -17,9 +17,17 @@ $(function () {
      $(".alerthidden").removeClass('show'); 
     }
     });
-    
-    
-    
    });
 
+//spaces
+jQuery(document).ready(function () {
+    jQuery('.no-espacios').keyup(function (e) {
+        var value = jQuery(this).val();
+        console.log("asdas"+value+"Adsdas")
+        if (value == " ") {
+            jQuery(this).val("");
+        }
+    });
+    
+});
 
