@@ -47,6 +47,7 @@ var pass2=$("#psw1").val().trim();
 if(pass1==pass2){
 $('#error2').text("Coinciden").css("color","green");
 document.getElementById("btnEnviar").style = "visibility:visible";
+
 }else{
 $('#error2').text(" NO Coinciden").css("color","red");
 document.getElementById("btnEnviar").style = "display:none";
@@ -57,21 +58,50 @@ document.getElementById("btnEnviar").style = "display:none";
 }
 });
 
+$("#pswA").keyup(function(){
+
+var passA=$("#pswA").val().trim().length-1;
+var passA1=$("#pswA").val().trim();
+if(passA<4){
+$('#error3').text("El Codigo es de 5 digitos").css("color","red");
+}else{
+	$('#error3').text("El Codigo es de 5 digitos").css("color","green");
+}
+if(passA1=""){
+$('#error3').text("No se pueden dejar en blanco").css("color","red");
+}
+});
+
 //valida que el nombre de usuario no este vacio
 $("#userid").keyup(function(){
+
 var pass1=$("#userid").val().trim();
-
-
+var pass2=$("#userid").val().trim().length-1;
+if(pass2>5){
 if(pass1==""){
-document.getElementById("validaUser").style = "display:none";
+document.getElementById("validaUser").disabled = true;
 }else{
-document.getElementById("validaUser").style = "visibility:visible";	
+document.getElementById("validaUser").disabled = false;
+}
+}else{
+document.getElementById("validaUser").disabled = true;
 }
 });	
+
 $('#validaUser').click(function(){
-	$('#error1').text("El usuario si existe").css("color","green");
+	$('#error1').text("El usuario si existe,se ha enviado un codigo a su correo, cuando ingrese esta sera su contraseña actual").css("color","green");
+	
 	document.getElementById("contra").style = "visibility:visible";	
+	
 });
+$('#btnEnviar').click(function(){
+
+	$("#userid").val("");
+	$("#pswA").val("");
+	$("#psw1").val("");
+	$("#psw").val("");
+});
+
  
 		} );
 		
