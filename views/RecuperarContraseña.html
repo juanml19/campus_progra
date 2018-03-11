@@ -30,21 +30,26 @@
 
 <form >
 <br>
-<p>Ingrese nombre de usuario:</p><br>
+<p>Ingrese nombre de usuario:</p>
 <center><input type="text" class="form-control" id="userid" placeholder = "username"required ></center>
 <br>
 <span id="error1"></span>
 <br>
-<a class="btn btn-primary"  id="validaUser" style = "display:none">Validar</a>
+<input type="button"class="btn btn-primary" value="Validar" id="validaUser" style="color: #ffffff;" disabled></input>
 
 <br>
-<br>
 <div id="contra" style = "display:none" >
-<p >Ingrese nueva password:</p><br>
+<p >Ingrese contraseña actual:</p>
+<input type="text" class="form-control" class="password" id="pswA" >
+<br>
+<span id="error3"></span>
+
+<br>
+<p >Ingrese nueva contraseña:</p>
 <input type="text" class="form-control" class="password" id="psw1" >
+
 <br>
-<br>
-<p >Ingrese de nuevo la password:</p><br>
+<p >Ingrese de nuevo la contraseña:</p>
 <input type="text" class="form-control" class="password" id="psw" >
 <span id="error2"></span>
 </form>
