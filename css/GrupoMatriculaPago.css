@@ -14,6 +14,13 @@ body {
 	margin: 10px 0 0 10px;  
 }
 
+.table-payment-info {
+    margin: 0 auto;
+}
+.table-payment-info > tbody > tr > td {
+width: 200px;
+}
+
 .carousel, .carousel-inner > .item > img {
 	height: 400px;
 	width: 60%;
