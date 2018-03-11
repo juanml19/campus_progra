@@ -66,6 +66,6 @@
 })();
 
 function myFunctionDelete() {
-    alert("Se borrará la Carrera");
+    alert("Se borrará la carrera");
 }
 
