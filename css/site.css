@@ -16,6 +16,11 @@ body {
     border: solid 1px red;
 }
 
+.card{
+ margin-right: 50px; 
+    margin-left: 50px;
+}
+
 /*------------Profile---------------*/
 
 .profile-img{

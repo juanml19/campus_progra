@@ -73,24 +73,26 @@
     
     <div class="container"> 
  <section>
-            <h2>Parámetros de Matrícula</h2>
-            <div class="card">
+     <section>
+            <h4 class="titleheaders">Parámetros de Matrícula</h4>
+     </section>   
+         <div class="card">
                 <form method="post" class="card-body form-parametros">
                     <div class="form-group">
-                        <label>Fecha de Inicio de Matrícula Ordinaria</label>
-                        <input id="FecIniMO"  class="form-control validate" type="date" required />
+                        <label> Fecha de inicio - Matrícula ordinaria</label>
+                        <input id="FecIniMO"  class="form-control validate col-md-4" type="date" required />
                     </div>
                     <div class="form-group">
-                        <label>Fecha de Inicio de Matrícula Extraordinaria:</label>
-                        <input id="FecIniME" class="form-control validate" type="date" required />
+                        <label> Fecha de inicio - Matrícula extraordinaria:</label>
+                        <input id="FecIniME" class="form-control validate col-md-4" type="date" required />
                     </div>
                     <div class="form-group">
-                        <label>Porcentaje de descuento para Matrícula en Línea:</label>
-                        <input class="form-control validate" type="number" min=0 max=100 required />
+                        <label> Descuento - Matrícula en línea:</label>
+                        <input class="form-control validate col-md-4" type="number" min=0 max=100 required />
                     </div>
                     <div class="form-group">
-                        <label>Máximo de Créditos por Matrícula-Estudiante:</label>
-                        <input class="form-control validate" type="number" min=0 max=20  required />
+                        <label> Máximo de créditos:</label>
+                        <input class="form-control validate col-md-4" type="number" min=0 max=20  required />
                     </div>
                     <div>
                         <input type="submit" class="btn btn-primary pull-right" />
