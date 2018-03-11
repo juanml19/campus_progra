@@ -134,7 +134,7 @@ $('#btnEnviar').click(function(){
 			if(validateMyForm())
 			{	
 				var Data = [$("#idmateria").val(), $("#idgrupo").val(),$("#idnumerogrupo").val(),  document.querySelector('input[name=idhorario]:checked').value
-				, "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit\"></i></button> </td>" ];
+				, "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit FontAwesome\"></i></button> </td>" ];
 						//<i class=\"fas fa-trash-alt\"></i></button>
 				$('#datatable').DataTable().row.add(Data).draw();
 				
@@ -193,7 +193,7 @@ $('#btnEnviar').click(function(){
 			if(validateMyForm())
 			{	
 			
-				var Data = [$("#idmateria").val(), $("#idgrupo").val(),$("#idnumerogrupo").val(), document.querySelector('input[name=idhorario]:checked').value,  "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td><td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit\"></i></button> </td>", " <input type = \"text\" class=\"form-control\" id = \"HiddenIndex\"  style=\"display:none\"> </input>" ];
+				var Data = [$("#idmateria").val(), $("#idgrupo").val(),$("#idnumerogrupo").val(), document.querySelector('input[name=idhorario]:checked').value,  "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td><td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit FontAwesome\"></i></button> </td>", " <input type = \"text\" class=\"form-control\" id = \"HiddenIndex\"  style=\"display:none\"> </input>" ];
 				
 				
 				
@@ -302,7 +302,7 @@ function Addrow2(){
 			if(validateMyForm())
 			{	
 				var Data = [$("#cod").val(), $("#carr").val(),$("#nom").val(),$("#cred").val(),$("#precio").val(),"<td><a  class=\"btn btn-primary\" href = \"grupos.html\" role=\"button\"><i class=\"fa fa-plus\"></i></a></td>",
-				 "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit\"></i></button> </td>" ];
+				 "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit FontAwesome\"></i></button> </td>" ];
 						//<i class=\"fas fa-trash-alt\"></i></button>
 				$('#datatableMaterias').DataTable().row.add(Data).draw();
 				
@@ -356,7 +356,7 @@ function Addrow2(){
 			if(validateMyForm())
 			{	
 			
-				var Data = [$("#cod").val(), $("#carr").val(),$("#nom").val(),$("#cred").val(),$("#precio").val(),"<td><a  class=\"btn btn-primary\" href = \"grupos.html\" role=\"button\"><i class=\"fa fa-plus\"></i></a></td>",  "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td><td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit\"></i></button> </td>", " <input type = \"text\" class=\"form-control\" id = \"HiddenIndex\"  style=\"display:none\"> </input>" ];
+				var Data = [$("#cod").val(), $("#carr").val(),$("#nom").val(),$("#cred").val(),$("#precio").val(),"<td><a  class=\"btn btn-primary\" href = \"grupos.html\" role=\"button\"><i class=\"fa fa-plus\"></i></a></td>",  "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td><td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit FontAwesome\"></i></button> </td>", " <input type = \"text\" class=\"form-control\" id = \"HiddenIndex\"  style=\"display:none\"> </input>" ];
 				
 				
 				
