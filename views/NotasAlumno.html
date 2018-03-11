@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Notas</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+	<!-- Css sheet-->
+    <link rel="stylesheet" href="../css/AV/Notas.css" />
+	 
+	<!-- DATATABLES -->
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/fc-3.2.4/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/fc-3.2.4/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.js"></script>
+	
+   
+	
+	</head>	
+<body>
+	<section>
+		<div class="row">
+			<div class="col-sm-12">
+				<nav class="navbar navbar-expand-lg no-border background-gradient">
+				  <a class="navbar-brand" href="home.html">Universidad</a>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item active">
+						<a class="nav-link navb-color" href="home.html">Home <span class="sr-only">(current)</span></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="asistencia.html">Asistencias</a>
+					  </li>
+					<li class="nav-item">
+						<a class="nav-link" href="matricula.html">Matrícula</a>
+					  </li>
+					<li class="nav-item">
+						<a class="nav-link" href="cursos.html">Cursos</a>
+					  </li>
+					<li class="nav-item">
+						<a class="nav-link" href="evaluacionD.html">Evaluación Docente</a>
+					  </li>
+					   <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Configuración
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						 
+						  <a class="dropdown-item" href="parametros.html">Parametros</a>
+						  <a class="dropdown-item" href="carreras.html">Carreras</a>
+						  <a class="dropdown-item" href="materias.html">Materias</a>
+						  <a class="dropdown-item" href="requisitos.html">Requisitos</a>
+						  <a class="dropdown-item" href="tipos_usuarios.html">Tipos Usuarios</a>
+						</div>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="usuarios.html">Usuarios</a>
+					  </li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<ul class="navbar-nav mr-auto">
+						  <li>
+							<a href="#" class='container-fluid nav-item' class="nombre-header">Username</a>
+						  </li> 
+						  <li>
+							<a class='container-fluid nav-item' href="#" class="boton-header"> Salir</a>
+						  </li>  
+						</ul>  
+					</form>
+				  </div>
+				</nav>
+			</div>	
+		</div>	
+	</section>
+		
+    
+	
+	<section> 
+	<h4 class="titleheaders"> Notas</h4>
+		<div class="container">
+			
+			<table id="tabla_usuarios" class="dataTable table table-striped table-bordered" cellspacing="0">
+				<thead>
+					<tr>
+						<th>Carrera</th>
+						<th>Período</th>
+						<th>Código Curso</th>
+						<th>Materia</th> 
+						<th>Modalidad</th>
+						<th>Nota</th>
+						<th>Estatus</th> 
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Arquitectura</td>
+						<td>2013-2</td>
+						<td>AQ-386</td>
+						<td>Física 1</td>
+						<td>Ordinario</td>
+						<td>70</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Medicina</td>
+						<td>2010-1</td>
+						<td>MD-04Z3</td>
+						<td>Anatomía I</td>
+						<td>Ordinario</td>
+						<td>75</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Psicología</td>
+						<td>2015-1</td>
+						<td>PS-105</td>
+						<td>Introducción al Pensamiento científico</td>
+						<td>Ordinario</td>
+						<td>60</td>
+						<td>Reprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>SI-085</td>
+						<td>Cálculo I</td>
+						<td>Ordinario</td>
+						<td>79</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>ASD-05</td>
+						<td>Programación I</td>
+						<td>Suficiencia</td>
+						<td>81</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Arquitectura</td>
+						<td>2013-2</td>
+						<td>AQ-386</td>
+						<td>Física 1</td>
+						<td>Ordinario</td>
+						<td>70</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Medicina</td>
+						<td>2010-1</td>
+						<td>MD-04Z3</td>
+						<td>Anatomía I</td>
+						<td>Ordinario</td>
+						<td>75</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Psicología</td>
+						<td>2015-1</td>
+						<td>PS-105</td>
+						<td>Introducción al Pensamiento científico</td>
+						<td>Ordinario</td>
+						<td>60</td>
+						<td>Reprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>SI-085</td>
+						<td>Cálculo I</td>
+						<td>Ordinario</td>
+						<td>79</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>ASD-05</td>
+						<td>Programación I</td>
+						<td>Suficiencia</td>
+						<td>81</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>ASD-05</td>
+						<td>Programación I</td>
+						<td>Suficiencia</td>
+						<td>81</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>	
+	</section>
+	
+    <footer class="background-gradient text-center fixed-bottom">
+        <p>Diseñado por Equipo Web Design</p>
+    </footer>
+    <script src="../js/JJ/usuarios.js"></script>
+	</body>
+</html>
