@@ -7,19 +7,38 @@
 			cleanModalForm();})
 				
 $('#btnMa').click(function(){
+	if($("#btnMa").val()=="+"){
+	
     var elemento=document.querySelector('#btnMa');
 		
          elemento.setAttribute("value", "-");
 	
 		 Matricular('#fila2');
+	}else{
+		
+		 var elemento=document.querySelector('#btnMa');
+         elemento.setAttribute("value", "+");
+		 DesMatricular('#fila2');
+	}
 });
 
 $('#btnMa1').click(function(){
+
+ if($("#btnMa1").val()=="+"){
+	;
     var elemento=document.querySelector('#btnMa1');
+		
          elemento.setAttribute("value", "-");
-		 Matricular('#fila3');
 	
+		 Matricular('#fila3');
+	}else{
+	
+		 var elemento=document.querySelector('#btnMa1');
+         elemento.setAttribute("value", "+");
+		 DesMatricular('#fila3');
+	}
 });
+
 	//valida que los password sean iguales
 $("#psw").keyup(function(){
 var pass1=$("#psw").val().trim();
