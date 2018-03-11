@@ -5,8 +5,67 @@ body {
     background-position: center;
 }
 
+.bg-principal { 
+  background: url('https://img.wallpapersafari.com/desktop/1920/1080/68/52/M7EdYH.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover; 
+  background-size: cover;
+} 
+
 .Error{
     border: solid 1px red;
+}
+
+/*------------Profile---------------*/
+
+.profile-img{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -50px;
+    position: absolute;
+    left: calc(50% - 50px);
+}
+
+.btn-prof{
+    margin-top: 100px;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
 }
 
 
@@ -39,8 +98,6 @@ body {
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 2rem;
   text-align: center;
@@ -57,8 +114,8 @@ body {
 }
 
 .marketing .col-lg-4 > img {
-  width: 100px;
-    height: 100px;
+  width: 90px;
+    height: 90px;
 }
 
 .carousel-indicators .active{
@@ -82,19 +139,8 @@ body {
        
 }
 
-.jumbotron{
-	width:100%;
-	height:100%;
-	background: linear-gradient(to right, rgba(0, 163, 197, 0.3) 1%, rgba(171, 206, 53,0.3) 100%); 
-
-     }
-.bg-principal { 
-  background: url('https://img.wallpapersafari.com/desktop/1920/1080/68/52/M7EdYH.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover; 
-  background-size: cover;
-}  
-
+ /* others
+-------------------------------------------------- */
 .list-group{
 margin-top: 35px; 
 }
@@ -132,17 +178,23 @@ margin-top: 35px;
     margin-right: 50px;
 }
 
-footer {
-   
-  padding: 1rem;
+footer {  
+    padding: 1rem;
     height: 30px;
     padding: 5px;
     color: #ffffff;
     text-align: center;
 }
 
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
 
-
+/* LOGIN CONTENT
+-------------------------------------------------- */
 .login-box {
     width: 320px;
     height: 420px;
@@ -150,6 +202,7 @@ footer {
     color: #fff;
     top: 50%;
     left: 50%;
+    outline:none;
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
@@ -163,15 +216,6 @@ footer {
     position: absolute;
     top: -50px;
     left: calc(50% - 50px);
-    
-}
-
-
-h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
 }
 
 .login-box p{
@@ -189,10 +233,14 @@ h1{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
-    outline:none;
     height: 40px;
     color: #fff;
     font-size: 16px;
+}
+
+::placeholder{
+    color: #cccccc;
+    font-size: 14px;
 }
 
 .login-box input[type="submit"]{
@@ -214,9 +262,11 @@ cursor: pointer;
 }
 
 .login-box a{
-color: #00a3c5;
+color:   #e6e6e6;
 }
 
+/* OTHER CONTENT
+-------------------------------------------------- */
 a:hover {
     color: black;
     text-decoration: none;

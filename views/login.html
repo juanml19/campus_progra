@@ -18,21 +18,19 @@
 	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
     
 	<link rel="stylesheet" href="../css/site.css" /> 
-	<script src="../js/login-js.js"></script> 
+	<script src="../js/DZ/login-js.js"></script> 
     
 </head>
     
 <body class="bg-principal">
 <div class="login-box"> 
-    <img src="avatar.png" class="img-responsive avatar" alt="User">
+    <img src="../views/img/avatar.png" class="img-responsive avatar" alt="User">
     <h1>Iniciar sesión</h1>
     <form action="home.html" method="post" class="login form-login">
        <p> Usuario </p>
-        <input class="usuario" type = "text"  placeholder = " Digite su usuario" name= "usuario" required> 
+        <input class="usuario" type = "text"  placeholder = " Digite su usuario" name= "usuario" minlength=5 required> 
        <p> Contraseña </p> 
         <input type = "password" class="password" placeholder = " Digite su contraseña" name= "password" required>
-        
-        <span class="result"></span>
         
         <a href="#">¿Olvidó su contraseña?</a>
         <br><br>
