@@ -1,0 +1,143 @@
+body { 
+    margin: 0;
+    padding:0;
+    background-size: cover;
+    background-position: center;
+	height: 100%;
+	width: 100%;
+	font-family: Roboto Condensed, Helvetica Neue, sans-serif; 
+} 
+
+.titleheaders{
+	margin:30px; 
+	text-align:center;
+}
+
+.item {
+    padding-left: 100px;
+    font-size: 22px;
+    align-content: center;
+    padding: 40px 10px;
+    background: linear-gradient(to right, rgb(0, 163, 197) 1%, rgb(171, 206, 53) 100%);
+    color: #fff;
+    margin-top: 5px;  
+}
+ 
+footer{ 
+    color: #ffffff;
+    text-align: right; 
+	height: 30px;
+    color: #ffffff;
+    text-align: center; 
+}  
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    height: 65px;
+    padding: 25px;
+}
+
+.background-verde {
+    background: #abce35;
+}
+
+.background-gradient {
+    background: linear-gradient(to right, rgb(0, 163, 197) 1%, rgb(171, 206, 53) 100%);
+}
+
+nav a{
+    color: snow;
+}
+
+
+datos-resumen a {
+    color: #ffffff;
+    margin: 10px;
+}
+
+.boton-header {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    width: 75px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.boton-header:hover {
+    border: 2px solid #00a3c5;
+    background: #00a3c5;
+    color: #ffffff;
+    transition: all .5s ease;
+    }
+
+.nombre-header {
+    font-size: 22px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.notificaciones-header {
+    font-size: 24px;
+    display: inline-block;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #00a3c5;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #ffffff;
+    }
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+  
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.vertical-align {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100vh;
+}
+
+.button-link {
+  text-decoration: none;
+}

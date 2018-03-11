@@ -7,20 +7,72 @@
 			cleanModalForm();})
 				
 $('#btnMa').click(function(){
+	if($("#btnMa").val()=="+"){
+	
     var elemento=document.querySelector('#btnMa');
 		
          elemento.setAttribute("value", "-");
 	
 		 Matricular('#fila2');
+	}else{
+		
+		 var elemento=document.querySelector('#btnMa');
+         elemento.setAttribute("value", "+");
+		 DesMatricular('#fila2');
+	}
 });
 
 $('#btnMa1').click(function(){
+
+ if($("#btnMa1").val()=="+"){
+	;
     var elemento=document.querySelector('#btnMa1');
+		
          elemento.setAttribute("value", "-");
-		 Matricular('#fila3');
 	
+		 Matricular('#fila3');
+	}else{
+	
+		 var elemento=document.querySelector('#btnMa1');
+         elemento.setAttribute("value", "+");
+		 DesMatricular('#fila3');
+	}
 });
-		 
+
+	//valida que los password sean iguales
+$("#psw").keyup(function(){
+var pass1=$("#psw").val().trim();
+var pass2=$("#psw1").val().trim();
+
+if(pass1==pass2){
+$('#error2').text("Coinciden").css("color","green");
+document.getElementById("btnEnviar").style = "visibility:visible";
+}else{
+$('#error2').text(" NO Coinciden").css("color","red");
+document.getElementById("btnEnviar").style = "display:none";
+}
+if(pass2==""){
+$('#error2').text("No se pueden dejar en blanco").css("color","red");
+document.getElementById("btnEnviar").style = "display:none";
+}
+});
+
+//valida que el nombre de usuario no este vacio
+$("#userid").keyup(function(){
+var pass1=$("#userid").val().trim();
+
+
+if(pass1==""){
+document.getElementById("validaUser").style = "display:none";
+}else{
+document.getElementById("validaUser").style = "visibility:visible";	
+}
+});	
+$('#validaUser').click(function(){
+	$('#error1').text("El usuario si existe").css("color","green");
+	document.getElementById("contra").style = "visibility:visible";	
+});
+ 
 		} );
 		
 		function validateMyForm(){
@@ -197,6 +249,7 @@ $('#btnMa1').click(function(){
 }
 }
 
+
 	function ShowTablas(){
 	
 			var num = 	document.getElementById('Matricula').getElementsByTagName('tr').length-1;
@@ -211,6 +264,6 @@ if(num==2){
 }
 
 
-  	
+
 
 
