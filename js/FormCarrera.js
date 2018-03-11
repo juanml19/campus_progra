@@ -6,8 +6,7 @@
         responsive: true
     });
     $('.not-number').keyup(function (e) {
-        if (!/^[ a-záéíóúüñ]*$/i.test(this.value)) {
-            console.log(this.value);
+        if (!/^[ a-záéíóúüñ]*$/i.test(this.value)) { 
             this.value = this.value.replace(/[^ a-záéíóúüñ]+/ig,"");
         }
     });
@@ -23,22 +22,22 @@
     $(".nueva-carrera").click(function(){
        $(".titulo-form-carrera").html("Nueva carrera"); 
     });
+	
 });
 
 (function () {
     $('.form-nuevaCarrera').submit(function (event) {
         var mensaje = "";
         $('.form-nuevaCarrera .validate').each(function () {
-			console.log($(this).val().trim());
-			console.log($(this));
-            if ($(this).val().trim().length < 5) {
+			var input=$(this).val().trim();
+			var letras= new RegExp(/^[a-zA-Z_]*$/);
+            if ((input.length < 5)||( !letras.test(input))) {
                 var label = $('label', this.parentElement).text();
                 mensaje += "\n"+label.substring(0, label.length - 1);
             }
-        });
-		console.log(mensaje);
+        }); 
         if (mensaje != "") {
-            alert("Los siguiente campos tienen menos de 5 characteres:\n"+mensaje);
+            alert("Los siguiente campos no pueden contener números ni caracteres especiales y deben tener un mínimo de 5 caracteres:\n"+mensaje);
             event.preventDefault(event);
         }
 		
@@ -48,17 +47,16 @@
 (function () {
     $('.form-editarCarrera').submit(function (event) {
         var mensaje = "";
-        $('.form-editarCarrera .validate').each(function () {
-			console.log($(this).val().trim());
-			console.log($(this));
-            if ($(this).val().trim().length < 5) {
+        $('.form-editarCarrera .validate').each(function () { 
+		var input=$(this).val().trim();
+		var letras= new RegExp(/^[a-zA-Z_]*$/);
+            if ((input.length < 5)||( !letras.test(input))) {
                 var label = $('label', this.parentElement).text();
                 mensaje += "\n"+label.substring(0, label.length - 1);
             }
-        });
-		console.log(mensaje);
+        }); 
         if (mensaje != "") {
-            alert("Los siguiente campos tienen menos de 5 characteres:\n"+mensaje);
+            alert("Los siguiente campos no pueden contener números ni caracteres especiales y deben tener un mínimo de 5 caracteres:\n"+mensaje);
             event.preventDefault(event);
         }
 		
