@@ -87,23 +87,30 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form method="post" class="card-body form-carrera">
+					<form method="post" class="card-body form-nuevaCarrera form-carrera">
 						<div class="form-group">
 							<label>Nombre:</label>
-							<input class="form-control validate" type="Nombre" required />
+							<input class="form-control validate no-espacios" type="Nombre" required />
 						</div>
 						<div class="form-group">
 							<label>Descripción:</label>
-							<input class="form-control validate" type="Descripcion" required />
+							<input class="form-control validate no-espacios" type="Descripcion" required />
 						</div>
 						<div class="form-group">
 							<label>Director:</label>
-							<input class="form-control validate" type="Director" required />
+							<input class="form-control validate no-espacios" type="Director" required />
 						</div>
 						<div>
 							<input type="submit" class="btn btn-primary pull-right" value="Guardar" />
 						</div>
 					</form>
+					<div class="alert alert-danger fade alerthidden">
+    La contraseña debe contener:
+        <br>- mínimo 8 dígitos
+        <br>- un signo de puntuación
+        <br>- una letra en mayúscula
+        <br>- un número.
+  </div>
 				</div>
 			</div> 
 		  </div>
@@ -119,18 +126,18 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				  </div>
 				  <div class="modal-body">
-					   <form method="post" class="card-body form-carrera">
+					   <form method="post" class="card-body form-editarCarrera">
 							<div class="form-group">
 								<label>Nombre:</label>
-								<input class="form-control validate" type="Nombre" required />
+								<input class="form-control validate no-espacios" type="Nombre" required />
 							</div>
 							<div class="form-group">
 								<label>Descripción:</label>
-								<input class="form-control validate" type="Descripción" required />
+								<input class="form-control validate no-espacios" type="Descripción" required />
 							</div>
 							<div class="form-group">
 								<label>Director:</label>
-								<input class="form-control validate" type="Director" required />
+								<input class="form-control validate no-espacios" type="Director" required />
 							</div>
 							<div>
 								<input type="submit" class="btn btn-primary pull-right" value="Guardar" />
