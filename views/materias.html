@@ -141,8 +141,19 @@
 				
 					
                         <label>Créditos:</label><br>
-                        <input type="number" min= 1 max=5 class="form-control" id="cred" required onKeyPress="return SoloNumeros(event);">
-                
+						<form >
+						<table class="table">
+						<tr>
+						<td><input type="radio" name = "cred" value='1'>1  </td>    
+                        <td><input type="radio" name = "cred" value='2'>2  </td>
+						<td><input type="radio" name = "cred" value='3'>3 </td>				
+                        <td><input type="radio" name = "cred" value='4'>4</td>
+						<td><input type="radio" name = "cred" value='5'>5</td>
+                        </tr>
+						<tr>
+						</tr>
+						</table>
+					   </form>
 				
                         <label>Precio:</label><br>
                         <input required class="form-control" id="precio"type="number" min = 0  onKeyPress="return SoloNumeros(event);"/>
@@ -152,7 +163,7 @@
 					  <div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal" id ="closeMyModal">Cancelar</button>
 						<button type="button"  class="btn btn-default" id = "Add"   onclick="Addrow2()">Agregar</button>	
-						<button type="button"  class="btn btn-default" id = "edit"   onclick="editRowBotton2()" style="display:none"  >Editar materia</button>
+						<button type="button"  class="btn btn-default" id = "edit"   onclick="editRowBotton()" style="display:none"  >Editar materia</button>
 					  </div>
 					  
 					</div>
@@ -174,7 +185,6 @@
 					
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
          </div>
-                    
 					
 					<div class="modal-body">
 					  
@@ -189,6 +199,6 @@
     <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/GrupoMatriculaPago.js"></script>
+    <script src="../js/Materias.js"></script>
 	</body>
 </html>
