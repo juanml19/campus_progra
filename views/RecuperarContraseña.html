@@ -21,13 +21,61 @@
 	</head>
 
 <body>
-<header class="navbar navbar-expand-lg no-border background-gradient">
 
-<h4 class="titleheaders" style="color: #ffffff;">Recuperar Contraseña</h4>
+<div class="row">
+			<div class="col-sm">
+				<nav class="navbar navbar-expand-lg no-border background-gradient">
+				  <a class="navbar-brand" href="home.html">Universidad</a>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item active">
+						<a class="nav-link navb-color" href="home.html">Home <span class="sr-only">(current)</span></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="asistencia.html">Asistencias</a>
+					  </li>
+                    <li class="nav-item">
+						<a class="nav-link" href="matricula.html">Matrícula</a>
+					  </li>
+                    <li class="nav-item">
+						<a class="nav-link" href="cursos.html">Cursos</a>
+					  </li>
+                    <li class="nav-item">
+						<a class="nav-link" href="evaluacionD.html">Evaluación Docente</a>
+					  </li>
+                       <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Configuración
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="parametros.html">Parametros</a>
+						  <a class="dropdown-item" href="carreras.html">Carreras</a>
+						  <a class="dropdown-item" href="materias.html">Materias</a>
+						  <a class="dropdown-item" href="requisitos.html">Requisitos</a>
+						  <a class="dropdown-item" href="tipos_usuarios.html">Tipos Usuarios</a>
+						</div>
+					  </li>
+                      <li class="nav-item">
+						<a class="nav-link" href="usuarios.html">Usuarios</a>
+					  </li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<ul class="navbar-nav mr-auto">
+						  <li>
+							<a href="#" class='container-fluid nav-item' class="nombre-header">Username</a>
+						  </li> 
+						  <li>
+							<a class='container-fluid nav-item' href="login.html" class="boton-header"> Salir</a>
+						  </li>  
+						</ul>  
+					</form>
+				  </div>
+				</nav>
+			</div>	
+		</div>
 
-</header>
 <div class="container"><center>
-
+<h4 class="titleheaders">Recuperar Contraseña</h4>
 <form >
 <br>
 <p>Ingrese nombre de usuario:</p>
@@ -42,23 +90,22 @@
     
 <br>
 <div id="contra" style = "display:none" >
-<p >Ingrese contraseña actual:</p>
-<input type="text" class="form-control" class="password" id="pswA" >
-<br>
-<span id="error3"></span>
-
-<br>
-<p >Ingrese nueva contraseña:</p>
-<input type="text" class="form-control" class="password" id="psw1" >
-
-<br>
-<p >Ingrese de nuevo la contraseña:</p>
-<input type="text" class="form-control" class="password" id="psw" >
-<span id="error2"></span>
-</form>
-<br>
-<br>
-<a class="btn btn-primary"  id="btnEnviar" style = "display:none" href="login.html">Guardar</a>
+	<p >Ingrese codigo de verificación:</p>
+	<input type="text" class="form-control" class="password" id="pswA" >
+	<br>
+	<span id="error3"></span>
+	<div id="nuevaContra" style = "display:none" >
+		<br>
+		<p >Ingrese nueva contraseña:</p>
+		<input type="text" class="form-control" class="password" id="psw1" > 
+		<br>
+		<p >Ingrese de nuevo la contraseña:</p>
+		<input type="text" class="form-control" class="password" id="psw" >
+		<span id="error2"></span>
+		</form>
+		<br>
+	</div>
+		<a class="btn btn-primary"  id="btnEnviar" style = "display:none" href="login.html">Guardar</a>
 </div>
 </div>
     <footer class="background-gradient text-center fixed-bottom">

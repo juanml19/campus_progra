@@ -46,55 +46,79 @@ $('#btnMa1').click(function(){
 
 	//valida que los password sean iguales
 $("#psw").keyup(function(){
-var pass1=$("#psw").val().trim();
-var pass2=$("#psw1").val().trim();
+	var pass1=$("#psw").val().trim();
+	var pass2=$("#psw1").val().trim();
+	var password = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$&+,:;=?@#|'<>.^*()%!-])(?!.*\s).{8,}$/);
+	if (password.test(pass1)) { 
+		if(pass1==pass2){
+			$('#error2').text("Coinciden").css("color","green");
+			document.getElementById("btnEnviar").style = "visibility:visible"; 
+		}else{
+			$('#error2').text(" No Coinciden").css("color","red");
+			document.getElementById("btnEnviar").style = "display:none";
+		}
+		if(pass2==""){
+			$('#error2').text("No se pueden dejar en blanco").css("color","red");
+			document.getElementById("btnEnviar").style = "display:none";
+		}
+	}else{
+		$('#error2').text("La contraseña debe contener: Mínimo 8 dígitos, un signo de puntuación, una letra en mayúscula y un número.").css("color","red");
+	}
+});
 
-if(pass1==pass2){
-$('#error2').text("Coinciden").css("color","green");
-document.getElementById("btnEnviar").style = "visibility:visible";
-
-}else{
-$('#error2').text(" No Coinciden").css("color","red");
-document.getElementById("btnEnviar").style = "display:none";
-}
-if(pass2==""){
-$('#error2').text("No se pueden dejar en blanco").css("color","red");
-document.getElementById("btnEnviar").style = "display:none";
-}
+$("#psw1").keyup(function(){
+	var pass1=$("#psw").val().trim();
+	var pass2=$("#psw1").val().trim();
+	var password = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$&+,:;=?@#|'<>.^*()%!-])(?!.*\s).{8,}$/);
+	if (password.test(pass1)) { 
+		if(pass1==pass2){
+			$('#error2').text("Coinciden").css("color","green");
+			document.getElementById("btnEnviar").style = "visibility:visible"; 
+		}else{
+			$('#error2').text(" No Coinciden").css("color","red");
+			document.getElementById("btnEnviar").style = "display:none";
+		}
+		if(pass2==""){
+			$('#error2').text("No se pueden dejar en blanco").css("color","red");
+			document.getElementById("btnEnviar").style = "display:none";
+		}
+	}else{
+		$('#error2').text("La contraseña debe contener: Mínimo 8 dígitos, un signo de puntuación, una letra en mayúscula y un número.").css("color","red");
+	}
 });
 
 $("#pswA").keyup(function(){
 
-var passA=$("#pswA").val().trim().length-1;
-var passA1=$("#pswA").val().trim();
-if(passA<4){
-$('#error3').text("El codigo es de 5 digitos").css("color","red");
-}else{
-	$('#error3').text("El codigo es de 5 digitos").css("color","green");
-}
-if(passA1=""){
-$('#error3').text("No se pueden dejar en blanco").css("color","red");
-}
+	var passA=$("#pswA").val().trim().length-1;
+	var passA1=$("#pswA").val().trim();
+	if(passA<4){
+	$('#error3').text("El codigo es de 5 digitos").css("color","red");
+	}else{
+		$('#error3').text("El codigo es de 5 digitos").css("color","green");
+		document.getElementById("nuevaContra").style = "visibility:visible";	
+	}
+	if(passA1=""){
+	$('#error3').text("No se pueden dejar en blanco").css("color","red");
+	}
 });
 
 //valida que el nombre de usuario no este vacio
-$("#userid").keyup(function(){
-
-var pass1=$("#userid").val().trim();
-var pass2=$("#userid").val().trim().length-1;
-if(pass2>5){
-if(pass1==""){
-document.getElementById("validaUser").disabled = true;
-}else{
-document.getElementById("validaUser").disabled = false;
-}
-}else{
-document.getElementById("validaUser").disabled = true;
-}
+	$("#userid").keyup(function(){
+	var pass1=$("#userid").val().trim();
+	var pass2=$("#userid").val().trim().length-1;
+	if(pass2>5){
+		if(pass1==""){
+			document.getElementById("validaUser").disabled = true;
+		}else{
+			document.getElementById("validaUser").disabled = false;
+		}
+	}else{
+		document.getElementById("validaUser").disabled = true;
+	}
 });	
 
 $('#validaUser').click(function(){
-	$('#error1').text("El usuario si existe,se ha enviado un codigo a su correo, cuando ingrese esta sera su contraseña actual").css("color","green");
+	$('#error1').text("Ingrese el código de verificación enviado a su dirección de correo.").css("color","green");
 	
 	document.getElementById("contra").style = "visibility:visible";	
 	
