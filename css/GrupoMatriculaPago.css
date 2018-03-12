@@ -10,6 +10,13 @@ body {
     border: solid 1px red;
 }
 
+
+
+.btn-validar{
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
 .carousel{
 	margin: 10px 0 0 10px;  
 }

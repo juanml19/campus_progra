@@ -23,7 +23,7 @@
 <body>
 <header class="navbar navbar-expand-lg no-border background-gradient">
 
-<h1 style="color: #ffffff;">Recuperar Contraseña</h1>
+<h4 class="titleheaders" style="color: #ffffff;">Recuperar Contraseña</h4>
 
 </header>
 <div class="container"><center>
@@ -31,12 +31,15 @@
 <form >
 <br>
 <p>Ingrese nombre de usuario:</p>
-<center><input type="text" class="form-control" id="userid" placeholder = "username"required ></center>
-<br>
-<span id="error1"></span>
-<br>
-<input type="button"class="btn btn-primary" value="Validar" id="validaUser" style="color: #ffffff;" disabled></input>
+<center><input type="text" class="form-control" id="userid" placeholder ="Nombre de usuario" required ></center>
 
+<input type="button"class="btn btn-primary btn-validar" value="Validar" id="validaUser" style="color: #ffffff;" disabled>
+<br>
+    
+<span id="error1"></span>
+   
+<br>
+    
 <br>
 <div id="contra" style = "display:none" >
 <p >Ingrese contraseña actual:</p>
@@ -55,8 +58,7 @@
 </form>
 <br>
 <br>
-<a class="btn btn-primary"  id="btnEnviar" style = "display:none" href="login.html">Guardar
-			 <span class="far fa-save"></span></a>
+<a class="btn btn-primary"  id="btnEnviar" style = "display:none" href="login.html">Guardar</a>
 </div>
 </div>
     <footer class="background-gradient text-center fixed-bottom">

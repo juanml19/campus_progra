@@ -1,5 +1,9 @@
-	
-			$(document).ready(function() {
+function myFunctionSendPayment() {
+    alert("La matricula ha sido reservada exitosamente.");
+}	
+			
+
+$(document).ready(function() {
 			
 			$('#datatable').dataTable({responsive: true});
 					$('#datatableMaterias').dataTable({responsive: true});			
@@ -50,7 +54,7 @@ $('#error2').text("Coinciden").css("color","green");
 document.getElementById("btnEnviar").style = "visibility:visible";
 
 }else{
-$('#error2').text(" NO Coinciden").css("color","red");
+$('#error2').text(" No Coinciden").css("color","red");
 document.getElementById("btnEnviar").style = "display:none";
 }
 if(pass2==""){
@@ -64,9 +68,9 @@ $("#pswA").keyup(function(){
 var passA=$("#pswA").val().trim().length-1;
 var passA1=$("#pswA").val().trim();
 if(passA<4){
-$('#error3').text("El Codigo es de 5 digitos").css("color","red");
+$('#error3').text("El codigo es de 5 digitos").css("color","red");
 }else{
-	$('#error3').text("El Codigo es de 5 digitos").css("color","green");
+	$('#error3').text("El codigo es de 5 digitos").css("color","green");
 }
 if(passA1=""){
 $('#error3').text("No se pueden dejar en blanco").css("color","red");
@@ -388,7 +392,6 @@ function Addrow2(){
 			}
 			else{ console.log ("vacio")}
 		}
-
 
 
 
