@@ -5,153 +5,27 @@ body {
     background-position: center;
 }
 
+.Error{
+    border: solid 1px red;
+}
+
+    .margin-20 {
+        margin: 20px
+    }
+    .dataTables_wrapper .row{
+        width: 100%;
+        display: inherit;
+        padding: 10px;
+    }
 .bg-principal { 
   background: url('https://img.wallpapersafari.com/desktop/1920/1080/68/52/M7EdYH.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover; 
   background-size: cover;
-} 
+}  
 
-.Error{
-    border: solid 1px red;
-}
-
-.card{
- margin-right: 50px; 
-    margin-left: 50px;
-}
-
-/*------------Profile---------------*/
-
-.profile-img{
-    margin-top: 50px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    top: -50px;
-    position: absolute;
-    left: calc(50% - 50px);
-}
-
-.btn-prof{
-    margin-top: 100px;
-    top: -50px;
-    left: calc(50% - 50px);
-}
-
-.user-row {
-    margin-bottom: 14px;
-}
-
-.user-row:last-child {
-    margin-bottom: 0;
-}
-
-.dropdown-user {
-    margin: 13px 0;
-    padding: 5px;
-    height: 100%;
-}
-
-.dropdown-user:hover {
-    cursor: pointer;
-}
-
-.table-user-information > tbody > tr {
-    border-top: 1px solid rgb(221, 221, 221);
-}
-
-.table-user-information > tbody > tr:first-child {
-    border-top: 0;
-}
-
-
-.table-user-information > tbody > tr > td {
-    border-top: 0;
-}
-.toppad
-{margin-top:20px;
-}
-
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 40rem;
-  background-color: #777;
-    background-position: center center;
-    background-size: cover;
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
- 
-}
-
-
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-.marketing .col-lg-4 {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-    margin-top: 1.5rem;
-}
-
-.marketing .col-lg-4 a {
-  font-weight: 400;
-}
-
-.marketing .col-lg-4 > img {
-  width: 90px;
-    height: 90px;
-}
-
-.carousel-indicators .active{
-	background-color:#222;
-	width: 20px;
-	height: 20px;
-	border: none;
-	
-}
-.carousel-indicators li{
-	border-color:#222;
-	text-indent: 0;
-      margin: 0 1px;
-      width: 20px;
-      height: 20px;
-      border: none;
-      border-radius: 100%; 
-      color: #fff;
-      background-color: #fff;
-      transition: all 0.25s ease;
-       
-}
-
- /* others
--------------------------------------------------- */
 .list-group{
-margin-top: 35px; 
+margin-top: 30px; 
 }
 
 .margin{
@@ -159,22 +33,23 @@ margin-top: 35px;
 }
 
 .titleheaders{
-	margin:30px; 
-	text-align:center;
+ margin:30px; 
+ text-align:center;
 }
 
 .item {
     padding-left: 100px;
-    font-size: 20px;
+    font-size: 22px;
     align-content: center;
-    padding: 20px 10px;
-     
+    padding: 40px 10px;
+    background: linear-gradient(to right, rgb(0, 163, 197) 1%, rgb(171, 206, 53) 100%);
     color: #fff;
     margin-top: 5px;  
 }
 
 .containter-menu{
-    margin: 50px 70px 50px 70px; 
+    margin-top: 50px;  
+    margin-bottom: 50px;
 }
 
 .footer{ 
@@ -187,23 +62,19 @@ margin-top: 35px;
     margin-right: 50px;
 }
 
-footer {  
-    padding: 1rem;
+footer {
+   
+  padding: 1rem;
     height: 30px;
     padding: 5px;
     color: #ffffff;
     text-align: center;
 }
 
-h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
+.menu{
+    background: #424242;
 }
 
-/* LOGIN CONTENT
--------------------------------------------------- */
 .login-box {
     width: 320px;
     height: 420px;
@@ -211,7 +82,6 @@ h1{
     color: #fff;
     top: 50%;
     left: 50%;
-    outline:none;
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
@@ -225,6 +95,15 @@ h1{
     position: absolute;
     top: -50px;
     left: calc(50% - 50px);
+    
+}
+
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
 }
 
 .login-box p{
@@ -242,14 +121,10 @@ h1{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
+    outline:none;
     height: 40px;
     color: #fff;
     font-size: 16px;
-}
-
-::placeholder{
-    color: #cccccc;
-    font-size: 14px;
 }
 
 .login-box input[type="submit"]{
@@ -271,11 +146,9 @@ cursor: pointer;
 }
 
 .login-box a{
-color:   #e6e6e6;
+color: #00a3c5;
 }
 
-/* OTHER CONTENT
--------------------------------------------------- */
 a:hover {
     color: black;
     text-decoration: none;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Materias</title>
+		<title>Mis notas</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -12,7 +12,7 @@
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
 	<!-- Css sheet-->
-    <link rel="stylesheet" href="../css/GrupoMatriculaPago.css" />
+    <link rel="stylesheet" href="../css/AV/Notas.css" />
 	 
 	<!-- DATATABLES -->
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -80,114 +80,142 @@
 	</section>
 		
     
-		<div>
-		<center><h1>Materias</h1></center>
-		</div>
-	
 	
 	<section> 
-	
+	<h4 class="titleheaders"> Mis notas</h4>
 		<div class="container">
-	<div class="panel-heading">
-			<br>
-
-			<input type="button"class="btn btn-primary" data-toggle="modal" data-target="#myModal"value="Crear Materia"  style="color: #ffffff;" ></input><br>
-			<br>
-			</div>
-			<table id="datatableMaterias" class="table table-striped table-bordered">
-
-						 <thead>
-							  <tr>
-                    <th>Código</th>
-                    <th>Carrera</th>
-                    <th>Nombre</th>
-					<th>Créditos</th>
-					<th>Precio:</th>
-					<th>Grupos</th>
-					<th>Acción </th> 
-					
-							  </tr>
-						 </thead>
-						<tbody id ="tabla2" > 
-						</tbody>
-					</table>
+			
+			<table id="tabla_usuarios" class="dataTable table table-striped table-bordered" cellspacing="0">
+				<thead>
+					<tr>
+						<th>Carrera</th>
+						<th>Período</th>
+						<th>Código Curso</th>
+						<th>Materia</th> 
+						<th>Modalidad</th>
+						<th>Nota</th>
+						<th>Estatus</th> 
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Arquitectura</td>
+						<td>2013-2</td>
+						<td>AQ-386</td>
+						<td>Física 1</td>
+						<td>Ordinario</td>
+						<td>70</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Medicina</td>
+						<td>2010-1</td>
+						<td>MD-04Z3</td>
+						<td>Anatomía I</td>
+						<td>Ordinario</td>
+						<td>75</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Psicología</td>
+						<td>2015-1</td>
+						<td>PS-105</td>
+						<td>Introducción al Pensamiento científico</td>
+						<td>Ordinario</td>
+						<td>60</td>
+						<td>Reprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>SI-085</td>
+						<td>Cálculo I</td>
+						<td>Ordinario</td>
+						<td>79</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>ASD-05</td>
+						<td>Programación I</td>
+						<td>Suficiencia</td>
+						<td>81</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Arquitectura</td>
+						<td>2013-2</td>
+						<td>AQ-386</td>
+						<td>Física 1</td>
+						<td>Ordinario</td>
+						<td>70</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Medicina</td>
+						<td>2010-1</td>
+						<td>MD-04Z3</td>
+						<td>Anatomía I</td>
+						<td>Ordinario</td>
+						<td>75</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Psicología</td>
+						<td>2015-1</td>
+						<td>PS-105</td>
+						<td>Introducción al Pensamiento científico</td>
+						<td>Ordinario</td>
+						<td>60</td>
+						<td>Reprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>SI-085</td>
+						<td>Cálculo I</td>
+						<td>Ordinario</td>
+						<td>79</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>ASD-05</td>
+						<td>Programación I</td>
+						<td>Suficiencia</td>
+						<td>81</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+					<tr>
+						<td>Ingeniería de Sistemas Informáticos</td>
+						<td>2016-3</td>
+						<td>ASD-05</td>
+						<td>Programación I</td>
+						<td>Suficiencia</td>
+						<td>81</td>
+						<td>Aprobado</td> 
+						
+					</tr>
+				</tbody>
+			</table>
 		</div>	
 	</section>
-	<!-- Modal -->
-		<div id="myModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-				
-					<div class="modal-header">
-					
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title" id = "titleModel">Crear nueva Materia</h4>
-					</div>
-					
-					<div class="modal-body">
-					  <label>Código:</label><br>
-                        <input class="form-control " id="cod"type="Text" required onKeyPress="return Alfanumericos(event);"/>
-                  
-                    
-                        <label>Carrera:</label><br>
-                        <input class="form-control " id="carr"type="Text" required onKeyPress="return Alfanumericos(event);"/>
-                    
-                    
-                        <label>Nombre:</label><br>
-                        <input class="form-control " id="nom"type="Text" required onKeyPress="return Alfanumericos(event);" />
-               
-				
-					
-                        <label>Créditos:</label><br>
-                        <input class="form-control" id="cred"type="Number" min=1 max=6 required onKeyPress="return SoloNumeros(event);"/>
-                
-				
-                        <label>Precio:</label><br>
-                        <input class="form-control" id="precio"type="Number" required onKeyPress="return SoloNumeros(event);"/>
-                    
-				
-					  </div>	
-					  
-					   
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal" id ="closeMyModal">Cancelar</button>
-						<button type="button"  class="btn btn-default" id = "Add"   onclick="Addrow2()">Agregar</button>	
-						<button type="button"  class="btn btn-default" id = "edit"   onclick="editRowBotton2()" style="display:none"  >Editar materia</button>
-					  </div>
-					  
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	<button type="button" data-toggle="modal" data-target="#DeleteModal" style="display:none" id = "btn_modalDelete"></button>
-		<!-- Modal Eliminar -->
-		<div id="DeleteModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-				
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title" id = "titleModelDelete">Borrar</h4>
-					</div>
-					
-					<div class="modal-body">
-					  
-						<label for="usr">¿Desea eliminar la materia?</label><br>
-						<button type="button"  class="btn btn-default" id = "yesDelete"  >Si</button>	
-						<button type="button"  class="btn btn-default" id = "noDelete"  data-dismiss="modal" >No</button>
-				
-					</div>
-				</div>
-			</div>
-		</div>
+	
     <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/GrupoMatriculaPago.js"></script>
+    <script src="../js/JJ/usuarios.js"></script>
 	</body>
 </html>

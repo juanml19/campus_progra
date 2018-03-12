@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">	
+		<title>Recuperar Contraseña</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
+ <!-- Css sheet-->
+    <link rel="stylesheet" href="../css/GrupoMatriculaPago.css" />
+   
+	</head>
+
+<body>
+<header class="navbar navbar-expand-lg no-border background-gradient">
+
+<h1 style="color: #ffffff;">Recuperar Contraseña</h1>
+
+</header>
+<div class="container"><center>
+
+<form >
+<br>
+<p>Ingrese nombre de usuario:</p>
+<center><input type="text" class="form-control" id="userid" placeholder = "username"required ></center>
+<br>
+<span id="error1"></span>
+<br>
+<input type="button"class="btn btn-primary" value="Validar" id="validaUser" style="color: #ffffff;" disabled></input>
+
+<br>
+<div id="contra" style = "display:none" >
+<p >Ingrese contraseña actual:</p>
+<input type="text" class="form-control" class="password" id="pswA" >
+<br>
+<span id="error3"></span>
+
+<br>
+<p >Ingrese nueva contraseña:</p>
+<input type="text" class="form-control" class="password" id="psw1" >
+
+<br>
+<p >Ingrese de nuevo la contraseña:</p>
+<input type="text" class="form-control" class="password" id="psw" >
+<span id="error2"></span>
+</form>
+<br>
+<br>
+<a class="btn btn-primary"  id="btnEnviar" style = "display:none" href="login.html">Guardar
+			 <span class="far fa-save"></span></a>
+</div>
+</div>
+    <footer class="background-gradient text-center fixed-bottom">
+        <p>Diseñado por Equipo Web Design</p>
+    </footer>
+   <script src="../js/GrupoMatriculaPago.js"></script>
+</body>
+</html>

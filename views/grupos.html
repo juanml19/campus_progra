@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ingles II</title>
+		<title>Grupos</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -10,16 +10,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
- <!-- Css sheet-->
-    <link rel="stylesheet" href="../css/site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+	<!-- Css sheet-->
+    <link rel="stylesheet" href="../css/GrupoMatriculaPago.css" />
+	 
+	<!-- DATATABLES -->
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/fc-3.2.4/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/fc-3.2.4/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.js"></script>
+	
    
+	
 	</head>	
 <body>
+	<section>
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-12">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,21 +37,21 @@
 					  <li class="nav-item">
 						<a class="nav-link" href="asistencia.html">Asistencias</a>
 					  </li>
-                    <li class="nav-item">
+					<li class="nav-item">
 						<a class="nav-link" href="matricula.html">Matrícula</a>
 					  </li>
-                    <li class="nav-item">
+					<li class="nav-item">
 						<a class="nav-link" href="cursos.html">Cursos</a>
 					  </li>
-                    <li class="nav-item">
+					<li class="nav-item">
 						<a class="nav-link" href="evaluacionD.html">Evaluación Docente</a>
 					  </li>
-                       <li class="nav-item dropdown">
+					   <li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="acciones.html">Acciones</a>
+						 
 						  <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
@@ -52,7 +59,7 @@
 						  <a class="dropdown-item" href="tipos_usuarios.html">Tipos Usuarios</a>
 						</div>
 					  </li>
-                      <li class="nav-item">
+					  <li class="nav-item">
 						<a class="nav-link" href="usuarios.html">Usuarios</a>
 					  </li>
 					</ul>
@@ -70,22 +77,24 @@
 				</nav>
 			</div>	
 		</div>	
+	</section>
+		
     
-    <div class="container">
-        <div class="col-md-12">
-			
-			<div class="panel-heading">crear grupo
-				<button type="button"data-toggle="modal" data-target="#myModal">
-				<span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>
-				</button>
+		<div>
+		<center><h1>Grupos</h1></center>
+		</div>
+	
+	
+	<section> 
+	
+		<div class="container">
+	<div class="panel-heading">
+			<br>
+
+			<input type="button"class="btn btn-primary" data-toggle="modal" data-target="#myModal"value="Crear grupo"  style="color: #ffffff;" ></input><br>
+			<br>
 			</div>
-			<div class="row">
-				
-				<div class="col-md-12">
-							  
-					<!-- Table -->
-				   
-					<table id="datatable" class="table table-striped table-bordered">
+			<table id="datatable" class="table table-striped table-bordered">
 
 						 <thead>
 							  <tr>
@@ -96,12 +105,11 @@
 								 <th>Opciones</th>
 							  </tr>
 						 </thead>
-						<tbody id ="tabla2" > </tbody>
+						<tbody id ="tabla2" > 
+						</tbody>
 					</table>
-								
-				</div>
-			</div>
-		
+		</div>	
+	</section>
 	<!-- Modal -->
 		<div id="myModal" class="modal fade" role="dialog">
 			<div class="modal-dialog">
@@ -110,44 +118,60 @@
 				<div class="modal-content">
 				
 					<div class="modal-header">
+					
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title" id = "titleModel">crear nuevo grupo</h4>
+						<h4 class="modal-title" id = "titleModel">Crear nuevo grupo</h4>
 					</div>
 					
 					<div class="modal-body">
 					  
-					 <form>
 						<label for="usr">Materia:</label><br>
-					   <input type = "text" class="form-control" id = "idmateria"> </input><br>
+					   <input type = "text" class="form-control" id = "idmateria" required onKeyPress="return Alfanumericos(event);"> </input><br>
 						<label for="asd">IDgrupo:</label><br>
-					   <input type = "text" class="form-control" id = "idgrupo"> </input><br>
-					   
+					   <input type = "text" class="form-control" id = "idgrupo" maxlength="5" required onKeyPress="return Alfanumericos(event);"> </input><br>
 					   <label for="asd">Numero de grupo:</label><br>
-					    <input type="number" class="form-control" min="1" max="15" id = "idnumerogrupo" required onKeyPress="return SoloNumeros(event);">
+		
+					 <input  type="number" id="idnumerogrupo"  min ='1'class="form-control" required onKeyPress="return SoloNumeros(event);"><br>
 						<label for="asd">Horario:</label><br>
-					   <input type="radio" name = "idhorario" value='LM' > Lunes-Mañana
-                        <input type="radio" name = "idhorario" value='LT'> Lunes-Tarde
-						<input type="radio" name = "idhorario" value='LN'> Lunes-Noche<br>
-                        <input type="radio" name = "idhorario" value='KM'> Martes-Mañana
-						<input type="radio" name = "idhorario" value='KT'> Martes-Tarde
-                        <input type="radio" name = "idhorario" value='KN'> Martes-Noche<br>
-						<input type="radio" name = "idhorario" value='MM'> Miércoles-Mañana
-                        <input type="radio" name = "idhorario" value='MT'> Miércoles-Tarde
-						<input type="radio" name = "idhorario" value='MN'> Miércoles-Noche<br>
-                        <input type="radio" name = "idhorario" value='JM'> Jueves-Mañana
-						<input type="radio" name = "idhorario" value='JT'> Jueves-Tarde
-                        <input type="radio" name = "idhorario" value='JN'> Jueves-Noche<br>
-						<input type="radio" name = "idhorario" value='VM'> Viernes-Mañana
-                        <input type="radio" name = "idhorario" value='VT'> Viernes-Tarde
-						<input type="radio" name = "idhorario" value='VN'> Viernes-Noche<br>
-                        <input type="radio" name = "idhorario" value='SM'> Sábado-Mañana
-						<input type="radio" name = "idhorario" value='ST'> Sábado-Tarde
-                        <input type="radio" name = "idhorario" value='SN'> Sábado-Noche <br>
+						<form >
+						<table class="table">
+						<td><input type="radio" name = "idhorario" value='LM'>Lunes-Mañana  </td>    
+                        <td><input type="radio" name = "idhorario" value='LT'>Lunes-Tarde  </td>
+						<td><input type="radio" name = "idhorario" value='LN'>Lunes-Noche  </td>
+						<tr>
+                        <td><input type="radio" name = "idhorario" value='KM'>Martes-Mañana</td>
+						<td><input type="radio" name = "idhorario" value='KT'>Martes-Tarde</td>
+                        <td><input type="radio" name = "idhorario" value='KN'>Martes-Noche </td>
+						</tr>
+						<tr>
+						<td><input type="radio" name = "idhorario" value='MM'>Miércoles-Mañana</td>
+                        <td><input type="radio" name = "idhorario" value='MT'>Miércoles-Tarde</td>
+						<td><input type="radio" name = "idhorario" value='MN'>Miércoles-Noche</td>
+						</tr>
+						<tr>
+                        <td><input type="radio" name = "idhorario" value='JM'>Jueves-Mañana</td>
+						<td><input type="radio" name = "idhorario" value='JT'>Jueves-Tarde</td>
+                        <td><input type="radio" name = "idhorario" value='JN'>Jueves-Noche  </td>
+						</tr>
+						<tr>
+						<td><input type="radio" name = "idhorario" value='VM'>Viernes-Mañana</td>
+                        <td><input type="radio" name = "idhorario" value='VT'>Viernes-Tarde</td>
+						<td><input type="radio" name = "idhorario" value='VN'>Viernes-Noche </td>
+						</tr>
+						<tr>
+                        <td><input type="radio" name = "idhorario" value='SM'>Sábado-Mañana</td>
+						<td><input type="radio" name = "idhorario" value='ST'>Sábado-Tarde</td>
+                        <td><input type="radio" name = "idhorario" value='SN'>Sábado-Noche </td>
+						<tr>
+						</table>
 					   </form>
+						
+					  
+					   
 					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal" id ="closeMyModal">cancelar</button>
-						<button type="button"  class="btn btn-default" id = "Add"   onclick="Addrow()">agregar</button>	
-						<button type="button"  class="btn btn-default" id = "edit"   onclick="editRowBotton()" style="display:none" >editar grupo</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal" id ="closeMyModal">Cancelar</button>
+						<button type="button"  class="btn btn-default" id = "Add"   onclick="Addrow()">Agregar</button>	
+						<button type="button"  class="btn btn-default" id = "edit"   onclick="editRowBotton()" style="display:none"  >Editar grupo</button>
 					  </div>
 					  
 					</div>
@@ -155,9 +179,8 @@
 			</div>
 		</div>
 		
-		<button type="button"data-toggle="modal" data-target="#DeleteModal" style="display:none" id = "btn_modalDelete"></button>
-		
-			<!-- Modal Eliminar -->
+	<button type="button" data-toggle="modal" data-target="#DeleteModal" style="display:none" id = "btn_modalDelete"></button>
+		<!-- Modal Eliminar -->
 		<div id="DeleteModal" class="modal fade" role="dialog">
 			<div class="modal-dialog">
 
@@ -171,23 +194,17 @@
 					
 					<div class="modal-body">
 					  
-						<label for="usr">desea eliminar el grupo?</label><br>
-						<button type="button"  class="btn btn-default" id = "yesDelete"  >si</button>	
+						<label for="usr">¿Desea eliminar el grupo?</label><br>
+						<button type="button"  class="btn btn-default" id = "yesDelete"  >Si</button>	
 						<button type="button"  class="btn btn-default" id = "noDelete"  data-dismiss="modal" >No</button>
-						
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal" id ="closeDeleteModal">cerrar</button>
-					  </div>
-					  
+				
 					</div>
 				</div>
 			</div>
 		</div>
-    </div>
-</div>
-    <footer class="background-gradient text-center">
+    <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+    <script src="../js/GrupoMatriculaPago.js"></script>
 	</body>
 </html>

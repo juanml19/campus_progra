@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ingles II</title>
+		<title>Matricula</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -14,12 +14,12 @@
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
  <!-- Css sheet-->
-    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/GrupoMatriculaPago.css" />
    
 	</head>	
 <body>
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-12">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,7 +44,7 @@
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="acciones.html">Acciones</a>
+						 
 						  <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
@@ -70,12 +70,77 @@
 				</nav>
 			</div>	
 		</div>	
-    
+		 <div class="container"> 
+   <center> <h4 class="titleheaders">Prematriculados</h4>
+		<section id="tablaprematriculados">
+			<table id="prematicula" class="table" >
+				<tbody>
+					<tr>
+						<th style="width: 64px;" scope="row">Codigo</th>
+						<th style="width: 149.6px;" scope="row">Materia</th>
+						<th style="width: 10px;" scope="row">Requisito&nbsp;</th>
+						<th style="width: 101px;"scope="row">Costo</th>
+						<th style="width: 101px;">Opciones</th>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+		</section>
+       </center>
+</div>
+ <center>
+	<h4 >
+		<p id = "Dispo">Disponibles </p></h4>
+		</center>
+		<div class="container"> <center>
+		<section id="tablaMatricular">
+			<table  class="table" id="Matricula">
+
+				<tbody >
+					<tr id="fila1">
+						<th style="width: 64px;" scope="row">Codigo</th>
+						<th style="width: 149.6px;" scope="row">Materia</th>
+						<th style="width: 10px;" scope="row">Requisito&nbsp;</th>
+						<th style="width: 101px;"scope="row">Costo</th>
+						
+						<th>Matricular</th>
+					</tr>
+					<tr id="fila2">
+						<th style="width: 64px;" scope="row">BSI-10</td>
+						<td style="width: 149.6px;" scope="row">Bases de datos 1</td>
+						<td style="width: 10px;" scope="row">BSI-02</td>
+						<td style="width: 101px;"scope="row">120.000</td>
+						<td style="width: 101px;" >
+						<input type="button" value='+'  class="btn btn-primary" id ="btnMa" >
+						</td>
+					</tr>
+					<tr id="fila3">
+						<th style="width: 64px;" scope="row">BSI-09</td>
+						<td style="width: 149.6px;">Programacion 3</td>
+						<td style="width: 10px;" scope="row">BSI-02</td>
+						<td style="width: 101px;"scope="row">120.000</td>
+						<td style="width: 101px;">
+						<input type="button" value='+'  class="btn btn-primary" id ="btnMa1" >
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</center>
+			<p>&nbsp;</p>
+        
+			<a class="btn btn-primary" style="display:none" id ="Pago" href=Pagar.html>Realizar pago
+			
+			</a>
+			
+		</section>
+		</div>
+	
     <div class="container"> 
     </div>
-    <footer class="background-gradient text-center">
+    <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+   <script src="../js/GrupoMatriculaPago.js"></script>
 	</body>
 </html>

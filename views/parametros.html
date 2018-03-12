@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ingles II</title>
+		<title>Parametros</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -18,7 +18,7 @@
    
 	</head>	
 	<body> 
-		<div class="row">
+			<div class="row">
 			<div class="col-sm">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
@@ -44,7 +44,7 @@
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="acciones.html">Acciones</a>
+						 
 						  <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
@@ -62,7 +62,7 @@
 							<a href="#" class='container-fluid nav-item' class="nombre-header">Username</a>
 						  </li> 
 						  <li>
-							<a class='container-fluid nav-item' href="#" class="boton-header"> Salir</a>
+							<a class='container-fluid nav-item' href="login.html" class="boton-header"> Salir</a>
 						  </li>  
 						</ul>  
 					</form>
@@ -73,24 +73,26 @@
     
     <div class="container"> 
  <section>
-            <h2>Parámetros Ganerales</h2>
-            <div class="card">
-                <form method="post" class="card-body">
+     <section>
+            <h4 class="titleheaders">Parámetros de Matrícula</h4>
+     </section>   
+         <div class="card">
+                <form method="post" class="card-body form-parametros">
                     <div class="form-group">
-                        <label>Fecha de Inicio de Matrícula Ordinaria</label>
-                        <input id="FecIniMO"  class="form-control validate" type="date" required />
+                        <label> Fecha de inicio - Matrícula ordinaria</label>
+                        <input id="FecIniMO"  class="form-control validate col-md-4" type="date" required />
                     </div>
                     <div class="form-group">
-                        <label>Fecha de Inicio de Matrícula Extraordinaria:</label>
-                        <input id="FecIniME" class="form-control validate" type="date" required />
+                        <label> Fecha de inicio - Matrícula extraordinaria:</label>
+                        <input id="FecIniME" class="form-control validate col-md-4" type="date" required />
                     </div>
                     <div class="form-group">
-                        <label>Porcentaje de descuento para Matrícula en Línea:</label>
-                        <input class="form-control validate" type="number" required />
+                        <label> Descuento - Matrícula en línea:</label>
+                        <input class="form-control validate col-md-4" type="number" min=0 max=100 required />
                     </div>
                     <div class="form-group">
-                        <label>Máximo de Créditos por Matrícula-Estudiante:</label>
-                        <input class="form-control validate" type="number" max=20  required />
+                        <label> Máximo de créditos:</label>
+                        <input class="form-control validate col-md-4" type="number" min=0 max=20  required />
                     </div>
                     <div>
                         <input type="submit" class="btn btn-primary pull-right" />
@@ -104,6 +106,7 @@
     <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+	<script src="../js/ParamGenerales.js"></script>
+	    
 	</body>
 </html>

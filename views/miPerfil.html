@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Acciones</title>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+		<title>Mi perfil</title>
+<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -13,12 +13,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
- <!-- Css sheet-->
-    <link rel="stylesheet" href="../css/site.css" />
+
+ <link rel="stylesheet" href="../css/site.css" />
+         <script src="../js/DZ/perfil.js"></script> 
    
-	</head>	
-<body>
-		<div class="row">
+</head>
+    
+<body> 
+    
+    	<div class="row">
 			<div class="col-sm">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
@@ -44,8 +47,7 @@
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="acciones.html">Acciones</a>
-						  <a class="dropdown-item" href="parametros.html">Parametros</a>
+                            <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
 						  <a class="dropdown-item" href="requisitos.html">Requisitos</a>
@@ -62,75 +64,71 @@
 							<a href="#" class='container-fluid nav-item' class="nombre-header">Username</a>
 						  </li> 
 						  <li>
-							<a class='container-fluid nav-item' href="#" class="boton-header"> Salir</a>
+							<a class='container-fluid nav-item' href="login.html" class="boton-header"> Salir</a>
 						  </li>  
 						</ul>  
 					</form>
 				  </div>
 				</nav>
 			</div>	
-		</div>	
+		</div>
     
-    <div class="container">
-        <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#model_accion">Nuevo Acción</button>
-
-    <!-- Modal -->
-    <div id="model_accion" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Nuevo Acción</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-              <form action="#" name="nueva_accion" id="nueva_accion" method="post">
-                    <input type="text" name="accion" id="accion" required placeholder="Acción">
-                    <br>
-                    <br>
-                    <input type="submit" value="Guardar" class="btn btn-success"/>
-              </form>
+    
+<div class="container">
+      <div class="row">
+    
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            
+              <div class="panel-heading">
+              <h3 class="panel-title">John Doe</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 "> <img src="../views/img/avatar.png" class="img-circle img-responsive profile-img" alt="user image"> </div>
+                  
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                        <tr>
+                        <td>Carrera:</td>
+                        <td>Ingeniería en Sistemas Informáticos</td>
+                      </tr>
+                        <tr>
+                        <td>Cédula:</td>
+                        <td>0101010101</td>
+                      </tr>
+                      <tr>
+                        <td>Carné:</td>
+                        <td>20185620</td>
+                      </tr>
+                      <tr>
+                        <td>Correo electronico:</td>
+                        <td>johndoe@gmail.com</td>
+                      </tr>
+                      <tr>
+                        <td>Ciudad</td>
+                        <td>San José</td>
+                      </tr>
+                    <tr>
+                        <td>País</td>
+                        <td>Costa Rica</td>
+                    </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                  </div>
+              </div>
+            </div>
+            
           </div>
         </div>
-
       </div>
     </div>
-     <table id="tipos_tablas" class="table table-striped table-bordered" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Acción</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Id</th>
-                <th>Acción</th>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Guardar</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Actualizar</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Ver</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Eliminar</td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-    <footer class="background-gradient text-center">
+ <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
     <script src="../js/function.js"></script>

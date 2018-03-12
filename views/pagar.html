@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ingles II</title>
+		<title>Detalle</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -14,12 +14,12 @@
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
  <!-- Css sheet-->
-    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/GrupoMatriculaPago.css" />
    
 	</head>	
 <body>
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-12">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,7 +44,7 @@
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="acciones.html">Acciones</a>
+						
 						  <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
@@ -71,88 +71,55 @@
 			</div>	
 		</div>	
     
-    <div class="container">
-        <section id="Detalle Matricula">
-				<table style="height: 232px; width: 594px;">
-					<tbody>
-						<tr>
-							<td style="width: 143px;">Materia</td>
-							<td style="width: 233px;">Costo</td>
-						</tr>
-						<tr>
-							<td style="width: 143px;">1</td>
-							<td style="width: 233px;">&nbsp;</td>
+    <div class="container"><center>
+	<h4 class="titleheaders">Detalle de Matricula</h4>
+      <section id="Detalle Matricula">
 
-						</tr>
-						<tr>
-							<td style="width: 143px;">2</td>
-							<td style="width: 233px;">&nbsp;</td>
-						</tr>
-						<tr>
-							<td style="width: 143px;">3</td>
-							<td style="width: 233px;">&nbsp;</td>
-						</tr>
-						<tr>
-							<td style="width: 143px;">4</td>
-							<td style="width: 233px;">&nbsp;</td>
-						</tr>
-						<tr>
-							<td style="width: 143px;">5</td>
-							<td style="width: 233px;">&nbsp;</td>
-						</tr>
-						<tr>
-							<td style="width: 94.8px;">&nbsp;</td>
-							<td style="width: 233px;">Total Materias</td>
-							<td style="width: 101.2px;">&nbsp;</td>
-						</tr>
-						<tr>
-							<td style="width: 143px;">&nbsp;</td>
-							<td style="width: 233px;">Beca</td>
-							<td style="width: 101.2px;">&nbsp;</td>
-						</tr>
-						<tr>
-							<td style="width: 143px;">&nbsp;</td>
-							<td style="width: 233px;">Total con beca</td>
-							<td style="width: 101.2px;">&nbsp;</td>
+<table class="table table-payment-info">
+<tbody>
+<tr>
+<td>Materias&nbsp;</td>
+<td>Costo</td>
+</tr>
+<tr>
+<td>1.Programación 3</td>
+<td>120.000</td>
+</tr>
+<tr>
+<td>2.Bases de Datos 1</td>
+<td>120.000</td>
+</tr>
+<tr>
+<td>Total Materias</td>
+<td>240.000</td>
+</tr>
+<tr>
+<td>Descuento de beca en materias</td>
+<td>-80.000</td>
+</tr>
+<tr>
+<td>Matricula</td>
+<td>75.000</td>
+</tr>
+<tr>
+<td>Descuento en Matricula</td>
+<td>-35.000</td>
+</tr>
+<tr>
+<td>Total a pagar</td>
+<td>200.000</td>
+</tr>
+</tbody>
+</table>
 
-						</tr>
-						<tr>
-							<td style="width: 143px;">&nbsp;</td>
-
-						</tr>
-						<tr>
-							<td style="width: 143px;">&nbsp;</td>
-							<td style="width: 233px;">Matricula</td>
-							<td style="width: 101.2px;">75000</td>
-
-						</tr>
-						<tr>
-							<td style="width: 143px;">&nbsp;</td>
-							<td style="width: 233px;">Descuento en matricula</td>
-							<td style="width: 101.2px;">&nbsp;</td>
-						</tr>
-
-						<tr>
-							<td style="width: 143px;">&nbsp;</td>
-						</tr>
-						<tr>
-							<td style="width: 143px;">&nbsp;</td>
-							<td style="width: 276px;">&nbsp;</td>
-							<td style="width: 101.2px;">Total A pagar</td>
-							<td style="width: 94.8px;">&nbsp;</td>
-						</tr>
-					</tbody>
-				</table>
-</section>
-<span style="color: #33cccc;">Enviar Pago a cajar y volver al menu principal  </span>
-<a href=index.html class="btn btn-primary" role="button">
-                        <span class="fas fa-home"></span>
-                        </a>
-</button>
+</section>         
+<br>
+<input class='btn btn-success float-right btn-ev' type = "submit">
+        <p>&nbsp;</p>
+</center>
     </div>
-    <footer class="background-gradient text-center">
+   <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
 	</body>
 </html>

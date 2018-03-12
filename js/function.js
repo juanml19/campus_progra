@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+//---------------------------------
+>>>>>>> c6184280b3177c69bf2fd4d4ed3ad3c91b66cc9f
 jQuery(document).ready(function () {
     jQuery('.dataTable').DataTable( {
         "language": {
@@ -146,6 +150,7 @@ function SoloNumeros(evt){
 		}
 
 
+<<<<<<< HEAD
 $(function () {
     $('.form-login').submit(function (event) { 
     var input = $(this).children('.password').val();
@@ -165,6 +170,8 @@ $(function () {
    });
 
 
+=======
+>>>>>>> c6184280b3177c69bf2fd4d4ed3ad3c91b66cc9f
 //asistencia
 		$(document).ready(function() {	 	 
 		

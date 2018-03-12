@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ingles II</title>
+		<title>Tipo de usuarios</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -14,12 +14,12 @@
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
  <!-- Css sheet-->
-    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/JJ/tipo_usuarios.css" />
    
 	</head>	
 <body>
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm-12">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
 				  <a class="navbar-brand" href="home.html">Universidad</a>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,7 +44,7 @@
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="acciones.html">Acciones</a>
+						 
 						  <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
@@ -70,11 +70,11 @@
 				</nav>
 			</div>	
 		</div>	
-    
+
     <div class="container">
         
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#model_tipo"><i class='far fa-save'></i> Nuevo Tipo</button>
+    <button type="button" class="btn btn-info btn-md margin-20 nuevo-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class='far fa-save'></i> Nuevo Tipo</button>
 
     <!-- Modal -->
     <div id="model_tipo" class="modal fade" role="dialog">
@@ -83,12 +83,12 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Nuevo Tipo</h4>
+            <h4 class="modal-title titulo-form-tipo-usuario">Nuevo Tipo</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
               <form action="#" name="nuevo_tipo" id="nuevo_tipo" method="post">
-                    <input type="text" name="tipo" id="tipo" placeholder="Tipo">
+                    <input type="text" name="tipo" id="tipo" class="no-espacios" required placeholder="Tipo">
                     <br>
                     <br>
                     <input type="submit" value=" Guardar" class="btn btn-success"/>
@@ -98,6 +98,62 @@
 
       </div>
     </div>
+        
+      <!-- Modal -->
+    <div id="model_permisos" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Permisos</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body text-center">
+              <form action="#" name="permisos" id="permisos" method="post">
+                  <div class="form-group">
+                    <h1>Usuarios</h1>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Guardar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Ver</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Actualizar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Eliminar</label>
+                </div>
+                  <div class="form-group">
+                    <h1>Tipos Usuarios</h1>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Guardar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Ver</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Actualizar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Eliminar</label>
+                </div>
+                  <div class="form-group">
+                    <h1>Matriculas</h1>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Crear</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Ver</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Actualizar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Eliminar</label>
+                </div>
+                  <div class="form-group">
+                    <h1>Carreras</h1>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Guardar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Ver</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Actualizar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Eliminar</label>
+                </div>
+                  <div class="form-group">
+                    <h1>Cursos</h1>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Guardar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Ver</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Actualizar</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Eliminar</label>
+                </div>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-success"/>
+                    </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="container">    
      <table id="tipos_tablas" class="dataTable table table-striped table-bordered" cellspacing="0">
         <thead>
             <tr>
@@ -111,7 +167,8 @@
                 <td>1</td>
                 <td>Estudiante</td>
                 <td>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
@@ -119,7 +176,8 @@
                 <td>2</td>
                 <td>Profesor</td>
                 <td>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
@@ -127,15 +185,17 @@
                 <td>3</td>
                 <td>Administrativo</td>
                 <td>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                </td>   
             </tr>
             <tr>
                 <td>4</td>
                 <td>Director de carrera</td>
                 <td>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
@@ -143,7 +203,8 @@
                 <td>5</td>
                 <td>Decano</td>
                 <td>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
@@ -151,16 +212,18 @@
                 <td>6</td>
                 <td>Super Administrador</td>
                 <td>
-                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
                     <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
         </tbody>
     </table>
     </div>
+    </div>
     <footer class="background-gradient text-center">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/function.js"></script>
+    <script src="../js/JJ/tipo_usuario.js"></script>
 	</body>
 </html>
