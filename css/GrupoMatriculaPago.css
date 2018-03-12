@@ -10,7 +10,9 @@ body {
     border: solid 1px red;
 }
 
-
+.footer-bottom{
+    margin-bottom: 50px;
+}
 
 .btn-validar{
     margin-top: 15px;

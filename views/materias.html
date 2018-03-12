@@ -132,20 +132,20 @@
                   
                     
                         <label>Carrera:</label><br>
-                        <input class="form-control " id="carr"type="Text" required onKeyPress="return Alfanumericos(event);"/>
+                        <input class="form-control " id="carr"type="text" required onKeyPress="return Alfanumericos(event);"/>
                     
                     
                         <label>Nombre:</label><br>
-                        <input class="form-control " id="nom"type="Text" required onKeyPress="return Alfanumericos(event);" />
+                        <input class="form-control " id="nom"type="text" required onKeyPress="return Alfanumericos(event);" />
                
 				
 					
                         <label>Créditos:</label><br>
-                        <input class="form-control" id="cred"type="Number" min=1 max=6 required onKeyPress="return SoloNumeros(event);"/>
+                        <input type="number" min= 1 max=5 class="form-control" id="cred" required onKeyPress="return SoloNumeros(event);">
                 
 				
                         <label>Precio:</label><br>
-                        <input class="form-control" id="precio"type="Number" required onKeyPress="return SoloNumeros(event);"/>
+                        <input required class="form-control" id="precio"type="number" min = 0  onKeyPress="return SoloNumeros(event);"/>
                     
 					  </div>	
 					  

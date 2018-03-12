@@ -13,7 +13,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
- <!-- Css sheet-->
+ <!-- Datatables-->   
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/fc-3.2.4/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.css"/>
+ <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/fc-3.2.4/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.js"></script>
+ 
+    <!-- Css sheet-->
     <link rel="stylesheet" href="../css/site.css" />
    
 	</head>	
@@ -73,8 +77,9 @@
     
     <div class="container"> 
      
-      <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#model_requisito">Nuevo requisito</button>
+      <button type="button" class="btn btn-primary btn-md margin-20" data-toggle="modal" data-target="#model_requisito">Nuevo requisito</button>
 
+    
     <!-- Modal -->
     <div id="model_requisito" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -110,7 +115,8 @@
       </div>
     </div>
 	
-	    <!-- Modal Edit-->
+
+    <!-- Modal Edit-->
     <div id="model_requisito_edit" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
@@ -134,7 +140,8 @@
                         <label>Nombre:</label>
                         <input class="form-control validate" type="Nombre" required />
                     </div>
-					<div>
+					
+                    <div>
                         <input type="submit" class="btn btn-primary pull-right" />
                     </div>
                 </form>
@@ -146,56 +153,52 @@
     </div>
 	
 	
-		<table title="Requisitos" class="table table-hover">
-            <thead class="thead-light">
+        
+		<table title="Requisitos" id="tabla_usuarios" class="dataTable table table-striped table-bordered " cellspacing="0">
+            <thead>
                 <tr>
-				    <th>Acción </th> 
-                    <th>Cód. Materia</th>
+				    <th>Cód. Materia</th>
                     <th>Cód. Requisito</th>
                     <th>Nombre</th>
+                    <th>Acción </th> 
                 </tr>
             </thead>
             <tbody>
                 <tr>
-				   <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
-                        <span class="fa fa-edit"></span> </a>
-					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
-                        <span class="fas fa-trash-alt"></span> </a>
-					</td>
-                    <td>MMM-003</td>
+				    <td>MMM-003</td>
                     <td>MMM-002</td>
                     <td>Materia 003</td>
+                     <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
+                        <span class="FontAwesome fa fa-edit"></span> </a>
+					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
+                        <span class="FontAwesome fas fa-trash-alt"></span> </a>
+					</td>
+                  
                 </tr>
                 <tr>
-                    <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
-                        <span class="fa fa-edit"></span> </a>
-					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
-                        <span class="fas fa-trash-alt"></span> </a>
-					</td>
-					<td>MMM-002</td>
+                  	<td>MMM-002</td>
                     <td>MMM-001</td>
                     <td>Materia 002</td>
-
+                    <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
+                        <span class="FontAwesome fa fa-edit"></span> </a>
+					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
+                        <span class="FontAwesome fas fa-trash-alt"></span> </a>
+					</td>
+				
                 </tr>
                 <tr>
-                    <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
-                        <span class="fa fa-edit"></span> </a>
-					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
-                        <span class="fas fa-trash-alt"></span> </a>
-					</td>
-					<td>MMM-003</td>
+                    <td>MMM-003</td>
                     <td>MMM-001</td>
                     <td>Materia 003</td>
-
+                    <td><a class="btn btn-warning" data-toggle="modal" data-target="#model_requisito_edit">
+                        <span class="FontAwesome fa fa-edit"></span> </a>
+					    <a class="btn btn-danger" onclick="myFunctionDeleteReq()">
+                        <span class="FontAwesome fas fa-trash-alt"></span> </a>
+					</td>
+					
                 </tr>
             </tbody>
-            <tfoot class="table-light"> 
-			   <tr> 
-                    <td></td> 
-                    <td><a href="requisitos.html"> Anterior </a> 
-                        <a href="requisitos.html"> Siguiente </a> </td> 
-                </tr> 
-            </tfoot>             
+                      
         </table>
     </div>
     

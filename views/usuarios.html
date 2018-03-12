@@ -18,7 +18,7 @@
    
 	</head>	
 <body>
-    <div class="container-fluid">
+    
 		<div class="row">
 			<div class="col-sm-12">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
@@ -71,7 +71,7 @@
 				</nav>
 			</div>	
 		</div>	
-    </div>
+    
     <div class="container">
     <!-- Trigger the modal with a button -->
     <button type="button" class="btn btn-primary btn-md margin-20 nuevo-usuario" data-toggle="modal" data-target="#model_usuario">Nuevo Usuario</button>
@@ -149,12 +149,12 @@
           </div>
           <div class="modal-body">
               <form action="#" name="beca" id="beca" method="post">
-                  <div class="form-group">
-                    <input type="number" name="porcentaje" id="porcentaje" class="no-espacios no-negativos" min="0" max="100" placeholder="Porcentaje beca">
+                  <div class="form-group input-lenght">
+                    <input type="number" name="porcentaje" id="porcentaje" class="no-espacios no-negativos" min="0" max="100" placeholder="Porcentaje beca" required>
                 </div>
-                    <div class="form-group">
+                    
                         <input type="submit" value="Guardar" class="btn btn-success"/>
-                    </div>
+                
               </form>
           </div>
         </div>
@@ -252,7 +252,7 @@
         </tbody>
     </table>
     </div>
-    <footer class="background-gradient text-center">
+    <footer class="background-gradient text-center fixed-bottom">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
     <script src="../js/usuarios.js"></script>

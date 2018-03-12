@@ -15,6 +15,15 @@ body {
 .Error{
     border: solid 1px red;
 }
+.margin-20 {
+        margin-top: 20px;
+        margin-bottom: 20px;        
+}
+
+.FontAwesome{
+ color:white
+}
+
 
 .card{
  margin-right: 50px; 
