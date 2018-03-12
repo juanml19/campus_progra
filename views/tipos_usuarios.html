@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Tipo de usuarios</title>
+		<title>Tipos Usuarios</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">	
 	<!-- Bootstrap Core CSS -->
@@ -11,13 +11,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/fc-3.2.4/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/fc-3.2.4/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.js"></script>
  <!-- Css sheet-->
-    <link rel="stylesheet" href="../css/JJ/tipo_usuarios.css" />
+    <link rel="stylesheet" href="../css/tipo_usuarios.css" />
    
 	</head>	
 <body>
+    <div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12">
 				<nav class="navbar navbar-expand-lg no-border background-gradient">
@@ -44,7 +45,7 @@
 						  Configuración
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						 
+						  <a class="dropdown-item" href="acciones.html">Acciones</a>
 						  <a class="dropdown-item" href="parametros.html">Parametros</a>
 						  <a class="dropdown-item" href="carreras.html">Carreras</a>
 						  <a class="dropdown-item" href="materias.html">Materias</a>
@@ -70,7 +71,7 @@
 				</nav>
 			</div>	
 		</div>	
-
+    </div>
     <div class="container">
         
     <!-- Trigger the modal with a button -->
@@ -91,7 +92,7 @@
                     <input type="text" name="tipo" id="tipo" class="no-espacios" required placeholder="Tipo">
                     <br>
                     <br>
-                    <input type="submit" value=" Guardar" class="btn btn-success"/>
+                    <input type="submit" value=" Guardar" class="btn btn-info"/>
               </form>
           </div>
         </div>
@@ -146,7 +147,7 @@
                     <label class="checkbox-inline"><input type="checkbox" value="">Eliminar</label>
                 </div>
                     <div class="form-group">
-                        <input type="submit" value="Guardar" class="btn btn-success"/>
+                        <input type="submit" value="Guardar" class="btn btn-info"/>
                     </div>
               </form>
           </div>
@@ -167,54 +168,54 @@
                 <td>1</td>
                 <td>Estudiante</td>
                 <td>
-                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
-                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
-                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="FontAwesome  fas  fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="FontAwesome  fas  fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="FontAwesome  fas  fa-trash-alt"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Profesor</td>
                 <td>
-                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
-                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
-                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="FontAwesome  fas  fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="FontAwesome  fas  fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="FontAwesome  fas  fa-trash-alt"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>Administrativo</td>
                 <td>
-                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
-                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
-                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="FontAwesome  fas  fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="FontAwesome  fas  fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="FontAwesome  fas  fa-trash-alt"></i></a>
                 </td>   
             </tr>
             <tr>
                 <td>4</td>
                 <td>Director de carrera</td>
                 <td>
-                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
-                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
-                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="FontAwesome  fas  fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="FontAwesome  fas  fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="FontAwesome  fas  fa-trash-alt"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>Decano</td>
                 <td>
-                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
-                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
-                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="FontAwesome  fas  fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="FontAwesome  fas  fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="FontAwesome  fas  fa-trash-alt"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>6</td>
                 <td>Super Administrador</td>
                 <td>
-                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="fas fa-unlock-alt"></i></button>
-                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="fas fa-edit"></i></button>
-                    <a href="#" class="btn btn-danger btn-md"><i class="fas fa-trash-alt"></i></a>
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#model_permisos"><i class="FontAwesome  fas  fa-unlock-alt"></i></button>
+                    <button class="btn btn-warning btn-md editar-tipo-usuario" data-toggle="modal" data-target="#model_tipo"><i class="FontAwesome fas fa-edit"></i></button>
+                    <a href="#" class="btn btn-danger btn-md"><i class="FontAwesome  fas  fa-trash-alt"></i></a>
                 </td>
             </tr>
         </tbody>
@@ -224,6 +225,6 @@
     <footer class="background-gradient text-center">
         <p>Diseñado por Equipo Web Design</p>
     </footer>
-    <script src="../js/JJ/tipo_usuario.js"></script>
+    <script src="../js/tipo_usuario.js"></script>
 	</body>
 </html>
