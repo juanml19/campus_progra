@@ -5,7 +5,8 @@
 					$('#datatableMaterias').dataTable({responsive: true});			
 			$("#myModal").on('hidden.bs.modal', function () {
 			cleanModalForm();})
-				
+		
+			
 $('#btnMa').click(function(){
 	if($("#btnMa").val()=="+"){
 	
@@ -305,7 +306,8 @@ function Addrow2(){
 				 "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit FontAwesome\"></i></button> </td>" ];
 						//<i class=\"fas fa-trash-alt\"></i></button>
 				$('#datatableMaterias').DataTable().row.add(Data).draw();
-				
+					
+			cleanModalForm();
 				$("#closeMyModal").click();
 				$("#show").prop("disabled", false);
 			}
