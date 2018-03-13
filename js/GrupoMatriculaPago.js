@@ -1,13 +1,10 @@
-function myFunctionSendPayment() {
-    alert("La matricula ha sido reservada exitosamente.");
-}	
-			
+
 
 $(document).ready(function() {
 			$('#datatable').dataTable({responsive: true});
 				
 			$("#myModal").on('hidden.bs.modal', function () {
-			cleanModalForm();})
+			cleanModalForm();});
 		
 			
 $('#btnMa').click(function(){
@@ -175,8 +172,9 @@ $('#btnEnviar').click(function(){
 				, "<td><button type=\"button\" class=\"btn btn-danger btn-md\" onclick = \"removeRow((this))\"><i class=\"fas fa-trash-alt\"></i></button></td> <td> <button type=\"button\"data-toggle=\"modal\" data-target=\"#myModal\" onclick =\"editRow((this))\" class = \"btn btn-warning btn-md\"><i class=\"fas fa-edit FontAwesome\"></i></button> </td>" ];
 						//<i class=\"fas fa-trash-alt\"></i></button>
 				$('#datatable').DataTable().row.add(Data).draw();
-				
+		
 				$("#closeMyModal").click();
+					
 				$("#show").prop("disabled", false);
 			}
 		}
@@ -206,7 +204,9 @@ $('#btnEnviar').click(function(){
 				if(tableLength== 0){
 					$("#show").prop("disabled", true);
 				}
+					
 				$("#closeDeleteModal").click();
+		
 			})	
 			
 		}
@@ -336,4 +336,7 @@ if(num==2){
 }
 
 
-
+function myFunctionSendPayment() {
+    alert("La matricula ha sido reservada exitosamente.");
+}	
+			
